@@ -11,7 +11,6 @@ import UIKit
 class PasswordRecoveryViewController: UIViewController {
 
     @IBOutlet weak var userRecoveryPassword: UITextField!
-    
     @IBAction func recoveryPasswordButton(sender: AnyObject) {
     }
     
