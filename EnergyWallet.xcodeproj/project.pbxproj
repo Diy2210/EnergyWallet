@@ -100,6 +100,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D2661A61D59AC79000D6704 /* SOAP */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SOAP;
+			sourceTree = "<group>";
+		};
 		1D6E23FD1D51248B00D47BF3 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +130,7 @@
 		1D6E24081D51248B00D47BF3 /* EnergyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				1D2661A61D59AC79000D6704 /* SOAP */,
 				1D6E243A1D51259C00D47BF3 /* Settings.plist */,
 				1D6E243B1D51259C00D47BF3 /* Settings.swift */,
 				1D6E24091D51248B00D47BF3 /* AppDelegate.swift */,
