@@ -15,6 +15,18 @@
 		1D6E24171D51248B00D47BF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D6E24151D51248B00D47BF3 /* LaunchScreen.storyboard */; };
 		1D6E24221D51248B00D47BF3 /* EnergyWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E24211D51248B00D47BF3 /* EnergyWalletTests.swift */; };
 		1D6E242D1D51248B00D47BF3 /* EnergyWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E242C1D51248B00D47BF3 /* EnergyWalletUITests.swift */; };
+		1D6E24451D51259C00D47BF3 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D6E243A1D51259C00D47BF3 /* Settings.plist */; };
+		1D6E24461D51259C00D47BF3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E243B1D51259C00D47BF3 /* Settings.swift */; };
+		1D6E24471D51259C00D47BF3 /* WelcomeSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E243C1D51259C00D47BF3 /* WelcomeSplashScreen.swift */; };
+		1D6E24481D51259C00D47BF3 /* IntroScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E243D1D51259C00D47BF3 /* IntroScreenViewController.swift */; };
+		1D6E24491D51259C00D47BF3 /* UserAutorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E243E1D51259C00D47BF3 /* UserAutorizationViewController.swift */; };
+		1D6E244A1D51259C00D47BF3 /* PasswordRecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E243F1D51259C00D47BF3 /* PasswordRecoveryViewController.swift */; };
+		1D6E244B1D51259C00D47BF3 /* RegistrationUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E24401D51259C00D47BF3 /* RegistrationUserViewController.swift */; };
+		1D6E244C1D51259C00D47BF3 /* RegistrationUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E24411D51259C00D47BF3 /* RegistrationUserDetailViewController.swift */; };
+		1D6E244D1D51259C00D47BF3 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E24421D51259C00D47BF3 /* PaymentViewController.swift */; };
+		1D6E244E1D51259C00D47BF3 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E24431D51259C00D47BF3 /* AddressViewController.swift */; };
+		1D6E244F1D51259C00D47BF3 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E24441D51259C00D47BF3 /* CounterViewController.swift */; };
+		1D6E24511D51266000D47BF3 /* DisconnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E24501D51266000D47BF3 /* DisconnectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +61,18 @@
 		1D6E24281D51248B00D47BF3 /* EnergyWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnergyWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6E242C1D51248B00D47BF3 /* EnergyWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyWalletUITests.swift; sourceTree = "<group>"; };
 		1D6E242E1D51248B00D47BF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D6E243A1D51259C00D47BF3 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		1D6E243B1D51259C00D47BF3 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		1D6E243C1D51259C00D47BF3 /* WelcomeSplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeSplashScreen.swift; sourceTree = "<group>"; };
+		1D6E243D1D51259C00D47BF3 /* IntroScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenViewController.swift; sourceTree = "<group>"; };
+		1D6E243E1D51259C00D47BF3 /* UserAutorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAutorizationViewController.swift; sourceTree = "<group>"; };
+		1D6E243F1D51259C00D47BF3 /* PasswordRecoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRecoveryViewController.swift; sourceTree = "<group>"; };
+		1D6E24401D51259C00D47BF3 /* RegistrationUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationUserViewController.swift; sourceTree = "<group>"; };
+		1D6E24411D51259C00D47BF3 /* RegistrationUserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationUserDetailViewController.swift; sourceTree = "<group>"; };
+		1D6E24421D51259C00D47BF3 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		1D6E24431D51259C00D47BF3 /* AddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		1D6E24441D51259C00D47BF3 /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		1D6E24501D51266000D47BF3 /* DisconnectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisconnectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +123,20 @@
 		1D6E24081D51248B00D47BF3 /* EnergyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				1D6E243A1D51259C00D47BF3 /* Settings.plist */,
+				1D6E243B1D51259C00D47BF3 /* Settings.swift */,
 				1D6E24091D51248B00D47BF3 /* AppDelegate.swift */,
 				1D6E240B1D51248B00D47BF3 /* ViewController.swift */,
+				1D6E243C1D51259C00D47BF3 /* WelcomeSplashScreen.swift */,
+				1D6E243D1D51259C00D47BF3 /* IntroScreenViewController.swift */,
+				1D6E243E1D51259C00D47BF3 /* UserAutorizationViewController.swift */,
+				1D6E243F1D51259C00D47BF3 /* PasswordRecoveryViewController.swift */,
+				1D6E24401D51259C00D47BF3 /* RegistrationUserViewController.swift */,
+				1D6E24411D51259C00D47BF3 /* RegistrationUserDetailViewController.swift */,
+				1D6E24501D51266000D47BF3 /* DisconnectionViewController.swift */,
+				1D6E24421D51259C00D47BF3 /* PaymentViewController.swift */,
+				1D6E24431D51259C00D47BF3 /* AddressViewController.swift */,
+				1D6E24441D51259C00D47BF3 /* CounterViewController.swift */,
 				1D6E240D1D51248B00D47BF3 /* Main.storyboard */,
 				1D6E24131D51248B00D47BF3 /* Assets.xcassets */,
 				1D6E24151D51248B00D47BF3 /* LaunchScreen.storyboard */,
@@ -196,6 +232,7 @@
 				TargetAttributes = {
 					1D6E24051D51248B00D47BF3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2TX55547ZG;
 					};
 					1D6E241C1D51248B00D47BF3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -233,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D6E24171D51248B00D47BF3 /* LaunchScreen.storyboard in Resources */,
+				1D6E24451D51259C00D47BF3 /* Settings.plist in Resources */,
 				1D6E24141D51248B00D47BF3 /* Assets.xcassets in Resources */,
 				1D6E240F1D51248B00D47BF3 /* Main.storyboard in Resources */,
 			);
@@ -259,9 +297,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D6E244A1D51259C00D47BF3 /* PasswordRecoveryViewController.swift in Sources */,
 				1D6E24121D51248B00D47BF3 /* EnergyWallet.xcdatamodeld in Sources */,
 				1D6E240C1D51248B00D47BF3 /* ViewController.swift in Sources */,
+				1D6E244E1D51259C00D47BF3 /* AddressViewController.swift in Sources */,
+				1D6E244C1D51259C00D47BF3 /* RegistrationUserDetailViewController.swift in Sources */,
+				1D6E24511D51266000D47BF3 /* DisconnectionViewController.swift in Sources */,
+				1D6E24471D51259C00D47BF3 /* WelcomeSplashScreen.swift in Sources */,
+				1D6E24461D51259C00D47BF3 /* Settings.swift in Sources */,
+				1D6E244F1D51259C00D47BF3 /* CounterViewController.swift in Sources */,
+				1D6E244D1D51259C00D47BF3 /* PaymentViewController.swift in Sources */,
+				1D6E244B1D51259C00D47BF3 /* RegistrationUserViewController.swift in Sources */,
+				1D6E24491D51259C00D47BF3 /* UserAutorizationViewController.swift in Sources */,
 				1D6E240A1D51248B00D47BF3 /* AppDelegate.swift in Sources */,
+				1D6E24481D51259C00D47BF3 /* IntroScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,10 +454,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EnergyWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Diy2210.EnergyWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -416,10 +467,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EnergyWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Diy2210.EnergyWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -488,6 +541,7 @@
 				1D6E24331D51248B00D47BF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D6E24341D51248B00D47BF3 /* Build configuration list for PBXNativeTarget "EnergyWalletTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +550,7 @@
 				1D6E24361D51248B00D47BF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D6E24371D51248B00D47BF3 /* Build configuration list for PBXNativeTarget "EnergyWalletUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +559,7 @@
 				1D6E24391D51248B00D47BF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
