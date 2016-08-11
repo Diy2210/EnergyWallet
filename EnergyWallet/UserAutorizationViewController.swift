@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserAutorizationViewController: UIViewController {
+class UserAutorizationViewController: UIViewController, NSXMLParserDelegate, NSURLSessionDelegate, NSURLSessionTaskDelegate {
 
     @IBOutlet weak var userPhone: UITextField!
     @IBOutlet weak var userPassword: UITextField!

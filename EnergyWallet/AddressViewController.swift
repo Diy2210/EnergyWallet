@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddressViewController: UIViewController {
+class AddressViewController: UIViewController, NSXMLParserDelegate, NSURLSessionDelegate, NSURLSessionTaskDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()

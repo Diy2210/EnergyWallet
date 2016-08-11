@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Security
 
-class RegistrationUserDetailViewController: UIViewController {
+class RegistrationUserDetailViewController: UIViewController, NSXMLParserDelegate, NSURLSessionDelegate, NSURLSessionTaskDelegate {
+    
+    var createUser: SOAPCreateUser?
 
     @IBOutlet weak var userAccountNumberRegistration: UITextField!
     @IBOutlet weak var userLastNameRegistration: UITextField!
@@ -20,6 +23,9 @@ class RegistrationUserDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        createUser = SOAPCreateUser(parent: self)
+        createUser?.createUser()
     }
 
     override func didReceiveMemoryWarning() {

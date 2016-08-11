@@ -8,7 +8,8 @@
 
 import UIKit
 
-class RegistrationUserViewController: UIViewController {
+class RegistrationUserViewController: UIViewController, NSXMLParserDelegate, NSURLSessionDelegate, NSURLSessionTaskDelegate {
+    
 
     @IBOutlet weak var userPhoneRegistration: UITextField!
     @IBOutlet weak var userEmailRegistration: UITextField!
