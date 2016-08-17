@@ -19,44 +19,54 @@ class UserAutorizationViewController: UIViewController, UITextFieldDelegate {
         let request = NSMutableURLRequest(URL: urlPath!)
         let phone = userPhone.text!
         let password = userPassword.text!
-        let params = "phone=\(phone)&password=\(password)"
         
         if phone.isEmpty || password.isEmpty {
-            self.messageNotification("Неверный логин или пароль. Пожалуйста, проверте введенные данные и исправьте ошибки")
+            self.messageNotification("Неверный телефон или пароль. Пожалуйста, проверьте введенные данные и исправьте ошибки")
             return
         }
         
+        let params = "phone=\(phone)&password=\(password)"
         request.HTTPMethod = "POST"
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.HTTPBody = params.dataUsingEncoding(NSUTF8StringEncoding)
         
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            // handle error
+            
             guard error == nil else { return }
             var json: NSDictionary?
             do {
                 json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
             } catch {
-                print("Could not parse JSON")
-                return
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.messageNotification("Could not parse JSON")
+                    return
+                })
             }
             if let parseJSON = json {
-                let success = parseJSON["success"] as? Int
-                self.performSegueWithIdentifier("login", sender: self)
-                print("Success: \(success)")
-                print(parseJSON)
-            }
-            else {
-                
-                let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                print("Error could not parse JSON: \(jsonStr)")
+                let success = parseJSON["success"] as? Bool
+                if success == true {
+                    // save phone & password into Settings
+                    Settings.sharedInstance.phone = phone
+                    Settings.sharedInstance.password = password
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.performSegueWithIdentifier("login", sender: self)
+                    })
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.messageNotification("Телефон или пароль указан неверно. Пожалуйста, проверьте введенные данные.")
+                    })
+                    return
+                }
+            } else {
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.messageNotification("Could not parse response")
+                    return
+                })
             }
         })
         
-        task.resume()
-        
-    }
+        task.resume()    }
     
     private func messageNotification(message: String, title: String = "Ошибка") -> Void {
         let AlertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)

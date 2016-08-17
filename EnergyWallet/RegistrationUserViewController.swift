@@ -35,7 +35,7 @@ class RegistrationUserViewController: UIViewController, UITextFieldDelegate {
         request.HTTPBody = params.dataUsingEncoding(NSUTF8StringEncoding)
         
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            // handle error
+            
             guard error == nil else { return }
             var json: NSDictionary?
             do {
