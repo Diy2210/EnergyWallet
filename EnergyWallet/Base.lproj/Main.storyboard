@@ -23,7 +23,7 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="6fr-Xz-fSl">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Счета и оплаты" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hg-qe-CUm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Счета и оплаты" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hg-qe-CUm">
                                 <rect key="frame" x="20" y="72" width="560" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,22 +33,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6fr-Xz-fSl" firstAttribute="bottom" secondItem="8SN-BL-xzj" secondAttribute="top" id="1vk-i3-4ff"/>
-                            <constraint firstItem="6hg-qe-CUm" firstAttribute="leading" secondItem="0bR-Nc-hnB" secondAttribute="leadingMargin" id="2Ol-Yw-QSs"/>
                             <constraint firstAttribute="trailing" secondItem="6fr-Xz-fSl" secondAttribute="trailing" id="9fT-ta-Tg9"/>
-                            <constraint firstItem="6fr-Xz-fSl" firstAttribute="centerX" secondItem="6hg-qe-CUm" secondAttribute="centerX" id="DtM-i8-Hgo"/>
-                            <constraint firstItem="6hg-qe-CUm" firstAttribute="top" secondItem="vnq-SQ-upm" secondAttribute="bottom" constant="52" id="cYM-pK-0Aw"/>
                             <constraint firstItem="6fr-Xz-fSl" firstAttribute="top" secondItem="vnq-SQ-upm" secondAttribute="bottom" id="dbf-to-dhX"/>
-                            <constraint firstItem="8SN-BL-xzj" firstAttribute="top" secondItem="6hg-qe-CUm" secondAttribute="bottom" constant="506" id="ou4-4p-b3T"/>
+                            <constraint firstItem="6hg-qe-CUm" firstAttribute="centerX" secondItem="0bR-Nc-hnB" secondAttribute="centerX" id="fqG-ub-6Te"/>
                             <constraint firstItem="6fr-Xz-fSl" firstAttribute="leading" secondItem="0bR-Nc-hnB" secondAttribute="leading" id="sR0-Gl-U8d"/>
-                            <constraint firstItem="6hg-qe-CUm" firstAttribute="top" secondItem="vnq-SQ-upm" secondAttribute="bottom" constant="8" symbolic="YES" id="vUh-fO-U7Y"/>
-                            <constraint firstItem="8SN-BL-xzj" firstAttribute="top" secondItem="6hg-qe-CUm" secondAttribute="bottom" constant="457" id="vju-yy-48F"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="cYM-pK-0Aw"/>
-                                <exclude reference="ou4-4p-b3T"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="MvC-BB-NjN">
                         <barButtonItem key="leftBarButtonItem" image="search icon" id="IAu-pa-n8v"/>
@@ -76,7 +65,7 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="EEb-GC-Iew">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мои адреса" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJA-EE-onA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Мои адреса" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJA-EE-onA">
                                 <rect key="frame" x="20" y="72" width="560" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,23 +74,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bdE-Sy-dNS" firstAttribute="top" secondItem="bJA-EE-onA" secondAttribute="bottom" constant="506" id="4Bh-sh-IDF"/>
-                            <constraint firstItem="EEb-GC-Iew" firstAttribute="leading" secondItem="tzi-yU-0nK" secondAttribute="leading" id="8nf-gR-SKg"/>
-                            <constraint firstAttribute="trailing" secondItem="EEb-GC-Iew" secondAttribute="trailing" id="BCp-6Z-cxy"/>
-                            <constraint firstItem="bJA-EE-onA" firstAttribute="top" secondItem="PWo-RT-ekG" secondAttribute="bottom" constant="52" id="G6Y-jm-IJE"/>
-                            <constraint firstItem="bJA-EE-onA" firstAttribute="leading" secondItem="tzi-yU-0nK" secondAttribute="leadingMargin" id="Gd5-CF-OyI"/>
-                            <constraint firstItem="EEb-GC-Iew" firstAttribute="centerX" secondItem="bJA-EE-onA" secondAttribute="centerX" id="R38-VJ-ppc"/>
-                            <constraint firstItem="bJA-EE-onA" firstAttribute="top" secondItem="PWo-RT-ekG" secondAttribute="bottom" constant="8" symbolic="YES" id="coz-MZ-Kcf"/>
-                            <constraint firstItem="EEb-GC-Iew" firstAttribute="top" secondItem="PWo-RT-ekG" secondAttribute="bottom" id="km2-au-pNn"/>
-                            <constraint firstItem="EEb-GC-Iew" firstAttribute="bottom" secondItem="bdE-Sy-dNS" secondAttribute="top" id="ogf-dk-mMQ"/>
-                            <constraint firstItem="bdE-Sy-dNS" firstAttribute="top" secondItem="bJA-EE-onA" secondAttribute="bottom" constant="457" id="ut5-S8-DuC"/>
+                            <constraint firstItem="EEb-GC-Iew" firstAttribute="leading" secondItem="tzi-yU-0nK" secondAttribute="leading" id="1iO-eK-dUm"/>
+                            <constraint firstItem="EEb-GC-Iew" firstAttribute="top" secondItem="PWo-RT-ekG" secondAttribute="bottom" id="3bM-LM-M9h"/>
+                            <constraint firstAttribute="trailing" secondItem="EEb-GC-Iew" secondAttribute="trailing" id="CEs-gc-snL"/>
+                            <constraint firstItem="EEb-GC-Iew" firstAttribute="bottom" secondItem="bdE-Sy-dNS" secondAttribute="top" id="Ldn-MB-yHZ"/>
+                            <constraint firstItem="bJA-EE-onA" firstAttribute="centerX" secondItem="tzi-yU-0nK" secondAttribute="centerX" id="pEk-2R-KF0"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="G6Y-jm-IJE"/>
-                                <exclude reference="4Bh-sh-IDF"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="VsH-V4-P4l">
                         <barButtonItem key="leftBarButtonItem" image="search icon" id="Al4-6i-9iU"/>
@@ -1122,7 +1100,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Пользовательское соглашение по использованию данного приложения" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-CI-wKj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Пользовательское соглашение" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-CI-wKj">
                                 <rect key="frame" x="20" y="20" width="560" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Wqc-fE-Jpu"/>
@@ -1863,7 +1841,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Пользовательское соглашение по использованию данного приложения" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZ0-sn-ZF1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Пользовательское соглашение" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZ0-sn-ZF1">
                                 <rect key="frame" x="20" y="20" width="560" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="K6h-GU-tdE"/>
@@ -1981,9 +1959,9 @@
         <image name="wallet icon" width="31" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X8C-WI-lYn"/>
-        <segue reference="Wln-iI-JvF"/>
-        <segue reference="A7r-kg-pB7"/>
         <segue reference="XvF-eQ-RMm"/>
+        <segue reference="CJN-tN-0Fx"/>
+        <segue reference="A7r-kg-pB7"/>
+        <segue reference="Wln-iI-JvF"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -55,6 +55,7 @@ class Settings {
         }
     }
     
+    // Create user
     var createUserURI: String {
         get {
             return settings["CreateUserURI"] as! String
@@ -65,6 +66,7 @@ class Settings {
         }
     }
     
+    // Login user
     var loginUserURI: String {
         get {
             return settings["LoginUserURI"] as! String
@@ -75,6 +77,7 @@ class Settings {
         }
     }
     
+    // Get region
     var getRegionURI: String {
         get {
             return settings["GetRegionURI"] as! String
@@ -85,6 +88,7 @@ class Settings {
         }
     }
     
+    // Get street
     var getStreetURI: String {
         get {
             return settings["GetStreetURI"] as! String
@@ -95,6 +99,73 @@ class Settings {
         }
     }
     
+    // Get statistics
+    var getStatisticsURI: String {
+        get {
+            return settings["GetStatisticsURI"] as! String
+        }
+        set(newValue) {
+            settings.setValue(newValue, forKey: "GetStatisticsURI")
+            settings.writeToFile(path, atomically: false)
+        }
+    }
+    
+    // Get blackout city
+    var getBlackoutCityURI: String {
+        get {
+            return settings["GetBlackoutCityURI"] as! String
+        }
+        set(newValue) {
+            settings.setValue(newValue, forKey: "GetBlackoutCityURI")
+            settings.writeToFile(path, atomically: false)
+        }
+    }
+    
+    // Get blackout street
+    var getBlackoutStreetURI: String {
+        get {
+            return settings["GetBlackoutStreetURI"] as! String
+        }
+        set(newValue) {
+            settings.setValue(newValue, forKey: "GetBlackoutStreetURI")
+            settings.writeToFile(path, atomically: false)
+        }
+    }
+    
+    // Get blackout adress
+    var getBlackoutAdressURI: String {
+        get {
+            return settings["GetBlackoutAdress"] as! String
+        }
+        set(newValue) {
+            settings.setValue(newValue, forKey: "GetBlackoutAdress")
+            settings.writeToFile(path, atomically: false)
+        }
+    }
+    
+    // Create account
+    var createAccountURI: String {
+        get {
+            return settings["CreateAccountURI"] as! String
+        }
+        set(newValue) {
+            settings.setValue(newValue, forKey: "CreateAccountURI")
+            settings.writeToFile(path, atomically: false)
+        }
+    }
+    
+    // Create account adress
+    var createAccountAdressURI: String {
+        get {
+            return settings["CreateAccountAdressURI"] as! String
+        }
+        set(newValue) {
+            settings.setValue(newValue, forKey: "CreateAccountAdressURI")
+            settings.writeToFile(path, atomically: false)
+        }
+    }
+    
+    // Phone user
     var phone: String {
         get {
             return settings["phone"] as! String
@@ -105,6 +176,7 @@ class Settings {
         }
     }
     
+    // Email user
     var email: String {
         get {
             return settings["email"] as! String
@@ -115,6 +187,7 @@ class Settings {
         }
     }
     
+    // Password user
     var password: String {
         get {
             return settings["password"] as! String
@@ -125,6 +198,7 @@ class Settings {
         }
     }
     
+    // Region user
     var region: String {
         get {
             return settings["region"] as! String
@@ -135,6 +209,7 @@ class Settings {
         }
     }
     
+    // Street user
     var street: String {
         get {
             return settings["street"] as! String
@@ -145,6 +220,7 @@ class Settings {
         }
     }
     
+    // City user
     var city: String {
         get {
             return settings["city"] as! String
@@ -155,6 +231,7 @@ class Settings {
         }
     }
     
+    // Number user
     var number: String {
         get {
             return settings["number"] as! String
@@ -165,6 +242,7 @@ class Settings {
         }
     }
     
+    // Date
     var date: String {
         get {
             return settings["date"] as! String

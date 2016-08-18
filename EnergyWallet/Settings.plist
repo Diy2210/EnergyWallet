@@ -18,6 +18,18 @@
 /api/geography/street
 Только что
 </string>
+	<key>GetStatisticsURI</key>
+	<string>/api/blackout/statistics</string>
+	<key>GetBlackoutCityURI</key>
+	<string>/api/blackout/city</string>
+	<key>GetBlackoutStreetURI</key>
+	<string>/api/blackout/street</string>
+	<key>GetBlackoutAdress</key>
+	<string>/api/blackout/address</string>
+	<key>CreateAccountURI</key>
+	<string>/api/account/create</string>
+	<key>CreateAccountAdressURI</key>
+	<string>/api/account/address</string>
 	<key>phone</key>
 	<string></string>
 	<key>email</key>
