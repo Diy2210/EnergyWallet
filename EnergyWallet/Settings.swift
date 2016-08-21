@@ -165,6 +165,50 @@ class Settings {
         }
     }
     
+    // Get adress list
+    var getAdressListURI: String {
+        get {
+            return settings["GetAdressListURI"] as! String
+        }
+        set(newValue) {
+            settings.setValue(newValue, forKey: "GetAdressListURI")
+            settings.writeToFile(path, atomically: false)
+        }
+    }
+    
+    // Delete account adress
+    var deleteAccountAdressURI: String {
+        get {
+            return settings["DeleteAccountAdressURI"] as! String
+        }
+        set(newValue) {
+            settings.setValue(newValue, forKey: "DeleteAccountAdressURI")
+            settings.writeToFile(path, atomically: false)
+        }
+    }
+    
+    // Reports alarm
+    var reportsAlarmURI: String {
+        get {
+            return settings["ReportsAlarmsURI"] as! String
+        }
+        set(newValue) {
+            settings.setValue(newValue, forKey: "ReportsAlarmsURI")
+            settings.writeToFile(path, atomically: false)
+        }
+    }
+    
+    // Reports complain
+    var reportsComplainURI: String {
+        get {
+            return settings["ReportsComplainURI"] as! String
+        }
+        set(newValue) {
+            settings.setValue(newValue, forKey: "ReportsComplainURI")
+            settings.writeToFile(path, atomically: false)
+        }
+    }
+    
     // Phone user
     var phone: String {
         get {

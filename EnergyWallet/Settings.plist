@@ -29,7 +29,15 @@
 	<key>CreateAccountURI</key>
 	<string>/api/account/create</string>
 	<key>CreateAccountAdressURI</key>
-	<string>/api/account/address</string>
+	<string>/api/account/address/add</string>
+	<key>GetAdressListURI</key>
+	<string>/api/account/address/list</string>
+	<key>DeleteAccountAdressURI</key>
+	<string>/api/account/address/delete</string>
+	<key>ReportsAlarmsURI</key>
+	<string>/api/reports/alarm</string>
+	<key>ReportsComplainURI</key>
+	<string>/api/reports/complain</string>
 	<key>phone</key>
 	<string></string>
 	<key>email</key>
