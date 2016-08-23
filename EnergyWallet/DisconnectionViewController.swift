@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DisconnectionViewController: UIViewController, NSXMLParserDelegate, NSURLSessionDelegate, NSURLSessionTaskDelegate {
+class DisconnectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

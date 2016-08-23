@@ -8,6 +8,6 @@
 
 import UIKit
 
-class TransferCounterViewController: UIViewController {
+class TransferCounterViewController: UIViewController, UITextFieldDelegate {
 
 }

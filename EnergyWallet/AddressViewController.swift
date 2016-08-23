@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddressViewController: UIViewController, NSXMLParserDelegate, NSURLSessionDelegate, NSURLSessionTaskDelegate {
+class AddressViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()

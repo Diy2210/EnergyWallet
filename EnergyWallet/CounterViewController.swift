@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CounterViewController: UIViewController, NSXMLParserDelegate, NSURLSessionDelegate, NSURLSessionTaskDelegate {
+class CounterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

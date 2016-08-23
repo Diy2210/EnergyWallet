@@ -22,13 +22,19 @@ class RegistrationUserViewController: UIViewController, UITextFieldDelegate {
         let phone = userPhoneRegistration.text!
         let email = userEmailRegistration.text!
         let password = userPasswordRegistration.text!
-        let params = "phone=\(phone)&email=\(email)&password=\(password)"
         
         if phone.isEmpty || email.isEmpty || password.isEmpty {
-            self.messageNotification("Пожалуйста, проверте введенные данные")
+           // self.messageNotificationError("Пожалуйста, проверте введенные данные. Одно из полей не заполнено.")
+        
+            let alertController = UIAlertController(title: "Ошибка", message: "Пожалуйста, проверте введенные данные. Одно из полей не заполнено", preferredStyle: .Alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alertController.addAction(defaultAction)
+            presentViewController(alertController, animated: true, completion: nil)
+            
             return
         }
         
+        let params = "phone=\(phone)&email=\(email)&password=\(password)"
         request.HTTPMethod = "POST"
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -41,28 +47,57 @@ class RegistrationUserViewController: UIViewController, UITextFieldDelegate {
             do {
                 json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
             } catch {
-                print("Complete")
+                 dispatch_async(dispatch_get_main_queue(), {
+                   //
+                    let alertController = UIAlertController(title: "Error", message: "Could not parse JSON", preferredStyle: .Alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                    alertController.addAction(defaultAction)
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                    
+                print("Complete! User create")
+                    
                 return
+              })
             }
             if let parseJSON = json {
-                let success = parseJSON["success"] as? Int
-                self.performSegueWithIdentifier("create", sender: self)
-                print("Success: \(success)")
-                print(parseJSON)
-            }
-            else {
-                
-                let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                print("Error could not parse JSON: \(jsonStr)")
+                let success = parseJSON["success"] as? Bool
+                if success == true {
+                    // save phone & password into Settings
+                    // Settings.sharedInstance.phone = phone
+                    // Settings.sharedInstance.password = email
+                    // Settings.sharedInstance.password = password
+                     dispatch_async(dispatch_get_main_queue(), {
+                         self.performSegueWithIdentifier("createUser", sender: self)
+                    })
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), {
+                      //  self.messageNotificationError("Пользователь с такими данными уже зарегистрирован")
+                        let alertController = UIAlertController(title: "Ошибка", message: "Пользователь с такими данными уже зарегистрирован", preferredStyle: .Alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                        alertController.addAction(defaultAction)
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    })
+                    return
+                }
+            } else {
+                dispatch_async(dispatch_get_main_queue(), {
+                  //  self.messageNotificationError("Could not parse response")
+                  //
+                    let alertController = UIAlertController(title: "Error", message: "Could not parse response", preferredStyle: .Alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                    alertController.addAction(defaultAction)
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                    return
+                })
             }
         })
         
         task.resume()
     }
     
-    private func messageNotification(message: String, title: String = "Ошибка") -> Void {
-        let AlertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        AlertView.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(AlertView, animated: true, completion: nil)
-    }
+   // private func messageNotificationError(message: String, title: String = "Ошибка") -> Void {
+   //     let AlertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+   //     AlertView.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+   //     self.presentViewController(AlertView, animated: true, completion: nil)
+   // }
 }

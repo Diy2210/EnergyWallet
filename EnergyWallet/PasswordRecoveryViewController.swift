@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PasswordRecoveryViewController: UIViewController, NSXMLParserDelegate, NSURLSessionDelegate, NSURLSessionTaskDelegate {
+class PasswordRecoveryViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userRecoveryPassword: UITextField!
     @IBAction func recoveryPasswordButton(sender: AnyObject) {

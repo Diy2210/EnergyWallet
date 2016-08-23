@@ -1,20 +1,14 @@
 //
-//  PaymentViewController.swift
-//  Energy Wallet
+//  OtherViewController.swift
+//  EnergyWallet
 //
-//  Created by Diy2210 on 26.07.16.
+//  Created by Diy2210 on 23.08.16.
 //  Copyright © 2016 Diy2210. All rights reserved.
 //
 
 import UIKit
 
-class PaymentViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+class OtherViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidAppear(animated: Bool) {
         
@@ -26,10 +20,5 @@ class PaymentViewController: UIViewController {
         let image = UIImage(named: "logo")
         imageView.image = image
         navigationItem.titleView = imageView
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

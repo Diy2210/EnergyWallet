@@ -47,7 +47,7 @@ class RegistrationUserDetailViewController: UIViewController, UITextFieldDelegat
             }
             if let parseJSON = json {
                 let success = parseJSON["success"] as? Int
-                self.performSegueWithIdentifier("create", sender: self)
+                self.performSegueWithIdentifier("endRegistration", sender: self)
                 print("Success: \(success)")
                 print(parseJSON)
             }

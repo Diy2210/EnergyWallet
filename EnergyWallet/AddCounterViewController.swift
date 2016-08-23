@@ -8,6 +8,6 @@
 
 import UIKit
 
-class AddCounterViewController: UIViewController {
+class AddCounterViewController: UIViewController, UITextFieldDelegate {
 
 }

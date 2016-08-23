@@ -14,6 +14,7 @@ class UserAutorizationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userPassword: UITextField!
     
     @IBAction func loginUserCompleteButton(sender: AnyObject) {
+        
         let session = NSURLSession.sharedSession()
         let urlPath = NSURL(string: "http://192.168.0.100:8080/api/login")
         let request = NSMutableURLRequest(URL: urlPath!)
@@ -22,6 +23,7 @@ class UserAutorizationViewController: UIViewController, UITextFieldDelegate {
         
         if phone.isEmpty || password.isEmpty {
             self.messageNotification("Неверный телефон или пароль. Пожалуйста, проверьте введенные данные и исправьте ошибки")
+            
             return
         }
         
@@ -66,7 +68,8 @@ class UserAutorizationViewController: UIViewController, UITextFieldDelegate {
             }
         })
         
-        task.resume()    }
+        task.resume()
+    }
     
     private func messageNotification(message: String, title: String = "Ошибка") -> Void {
         let AlertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
