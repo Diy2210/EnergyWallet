@@ -13,7 +13,10 @@ class UserAutorizationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userPhone: UITextField!
     @IBOutlet weak var userPassword: UITextField!
     
+    
+    
     @IBAction func loginUserCompleteButton(sender: AnyObject) {
+        view.endEditing(true)
         
         let session = NSURLSession.sharedSession()
         let urlPath = NSURL(string: "http://192.168.0.100:8080/api/login")
@@ -71,6 +74,19 @@ class UserAutorizationViewController: UIViewController, UITextFieldDelegate {
         task.resume()
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let _ = touches.first {
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches , withEvent:event)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Messege notification
     private func messageNotification(message: String, title: String = "Ошибка") -> Void {
         let AlertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         AlertView.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))

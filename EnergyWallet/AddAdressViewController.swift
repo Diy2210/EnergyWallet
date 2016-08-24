@@ -39,6 +39,7 @@ class AddAdressViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func addButton(sender: AnyObject) {
+        view.endEditing(true)
        
 /*        let session = NSURLSession.sharedSession()
         let urlPath = NSURL(string: "http://192.168.0.100:8080/api/account/address/add")
@@ -101,4 +102,16 @@ class AddAdressViewController: UIViewController, UITextFieldDelegate {
     }
 */
   }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let _ = touches.first {
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches , withEvent:event)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

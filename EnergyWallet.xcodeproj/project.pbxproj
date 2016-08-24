@@ -31,6 +31,10 @@
 		1D6E244E1D51259C00D47BF3 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E24431D51259C00D47BF3 /* AddressViewController.swift */; };
 		1D6E244F1D51259C00D47BF3 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E24441D51259C00D47BF3 /* CounterViewController.swift */; };
 		1D6E24511D51266000D47BF3 /* DisconnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E24501D51266000D47BF3 /* DisconnectionViewController.swift */; };
+		1D80726B1D6DBCCF00B008B8 /* MyBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80726A1D6DBCCF00B008B8 /* MyBaseViewController.swift */; };
+		1D80726D1D6DD4E700B008B8 /* ReportOffenceTakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80726C1D6DD4E700B008B8 /* ReportOffenceTakePhotoViewController.swift */; };
+		1D80726F1D6DD50100B008B8 /* ReportDamageTakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80726E1D6DD50100B008B8 /* ReportDamageTakePhotoViewController.swift */; };
+		1D8072711D6DD52900B008B8 /* TransferCounterTakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8072701D6DD52900B008B8 /* TransferCounterTakePhotoViewController.swift */; };
 		1DFA12001D6C4FC10001E61B /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFA11FF1D6C4FC10001E61B /* OtherViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +86,10 @@
 		1D6E24431D51259C00D47BF3 /* AddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
 		1D6E24441D51259C00D47BF3 /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		1D6E24501D51266000D47BF3 /* DisconnectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisconnectionViewController.swift; sourceTree = "<group>"; };
+		1D80726A1D6DBCCF00B008B8 /* MyBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBaseViewController.swift; sourceTree = "<group>"; };
+		1D80726C1D6DD4E700B008B8 /* ReportOffenceTakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOffenceTakePhotoViewController.swift; sourceTree = "<group>"; };
+		1D80726E1D6DD50100B008B8 /* ReportDamageTakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDamageTakePhotoViewController.swift; sourceTree = "<group>"; };
+		1D8072701D6DD52900B008B8 /* TransferCounterTakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferCounterTakePhotoViewController.swift; sourceTree = "<group>"; };
 		1DFA11FF1D6C4FC10001E61B /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +143,7 @@
 			children = (
 				1D4194C51D605FD3005336A9 /* Settings.plist */,
 				1D6E243B1D51259C00D47BF3 /* Settings.swift */,
+				1D80726A1D6DBCCF00B008B8 /* MyBaseViewController.swift */,
 				1D6E24091D51248B00D47BF3 /* AppDelegate.swift */,
 				1D6E240B1D51248B00D47BF3 /* ViewController.swift */,
 				1D6E243C1D51259C00D47BF3 /* WelcomeSplashScreen.swift */,
@@ -149,8 +158,11 @@
 				1D6E24441D51259C00D47BF3 /* CounterViewController.swift */,
 				1D2630FE1D6718DB00FBD358 /* AddCounterViewController.swift */,
 				1D2631001D67192D00FBD358 /* TransferCounterViewController.swift */,
+				1D8072701D6DD52900B008B8 /* TransferCounterTakePhotoViewController.swift */,
 				1D2631021D6719F800FBD358 /* ReportOffenseViewController.swift */,
+				1D80726C1D6DD4E700B008B8 /* ReportOffenceTakePhotoViewController.swift */,
 				1D2631041D671A5B00FBD358 /* ReportDamageViewController.swift */,
+				1D80726E1D6DD50100B008B8 /* ReportDamageTakePhotoViewController.swift */,
 				1DFA11FF1D6C4FC10001E61B /* OtherViewController.swift */,
 				1D6E240D1D51248B00D47BF3 /* Main.storyboard */,
 				1D6E24131D51248B00D47BF3 /* Assets.xcassets */,
@@ -313,15 +325,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D2630FB1D66F7DD00FBD358 /* RegistrationUserDetailViewController.swift in Sources */,
+				1D80726B1D6DBCCF00B008B8 /* MyBaseViewController.swift in Sources */,
 				1D6E244A1D51259C00D47BF3 /* PasswordRecoveryViewController.swift in Sources */,
 				1DFA12001D6C4FC10001E61B /* OtherViewController.swift in Sources */,
 				1D2631011D67192D00FBD358 /* TransferCounterViewController.swift in Sources */,
 				1D2631031D6719F800FBD358 /* ReportOffenseViewController.swift in Sources */,
 				1D6E24121D51248B00D47BF3 /* EnergyWallet.xcdatamodeld in Sources */,
+				1D8072711D6DD52900B008B8 /* TransferCounterTakePhotoViewController.swift in Sources */,
 				1D6E240C1D51248B00D47BF3 /* ViewController.swift in Sources */,
 				1D6E244E1D51259C00D47BF3 /* AddressViewController.swift in Sources */,
 				1D6E24511D51266000D47BF3 /* DisconnectionViewController.swift in Sources */,
 				1D2631051D671A5B00FBD358 /* ReportDamageViewController.swift in Sources */,
+				1D80726D1D6DD4E700B008B8 /* ReportOffenceTakePhotoViewController.swift in Sources */,
 				1D2630FD1D6706C500FBD358 /* AddAdressViewController.swift in Sources */,
 				1D2630FF1D6718DB00FBD358 /* AddCounterViewController.swift in Sources */,
 				1D6E24471D51259C00D47BF3 /* WelcomeSplashScreen.swift in Sources */,
@@ -329,6 +344,7 @@
 				1D6E244F1D51259C00D47BF3 /* CounterViewController.swift in Sources */,
 				1D6E244D1D51259C00D47BF3 /* PaymentViewController.swift in Sources */,
 				1D6E244B1D51259C00D47BF3 /* RegistrationUserViewController.swift in Sources */,
+				1D80726F1D6DD50100B008B8 /* ReportDamageTakePhotoViewController.swift in Sources */,
 				1D6E24491D51259C00D47BF3 /* UserAutorizationViewController.swift in Sources */,
 				1D6E240A1D51248B00D47BF3 /* AppDelegate.swift in Sources */,
 			);

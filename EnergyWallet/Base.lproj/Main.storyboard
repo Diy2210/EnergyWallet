@@ -357,10 +357,10 @@
             </objects>
             <point key="canvasLocation" x="550" y="5508"/>
         </scene>
-        <!--View Controller-->
+        <!--Transfer Counter Take Photo View Controller-->
         <scene sceneID="RAf-fJ-cVm">
             <objects>
-                <viewController id="pe0-bW-m4h" sceneMemberID="viewController">
+                <viewController id="pe0-bW-m4h" customClass="TransferCounterTakePhotoViewController" customModule="EnergyWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lit-Om-msG"/>
                         <viewControllerLayoutGuide type="bottom" id="oUF-rv-bwX"/>
@@ -1368,6 +1368,9 @@
                                 <state key="normal" title="Добавить">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addButton:" destination="4oY-lL-F5i" eventType="touchUpInside" id="Id7-Tc-4ba"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавить счетчик" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glg-FQ-V7y">
                                 <rect key="frame" x="226" y="28" width="149" height="21"/>
@@ -1406,6 +1409,11 @@
                         <barButtonItem key="leftBarButtonItem" image="search icon" id="hiy-MB-JhD"/>
                         <barButtonItem key="rightBarButtonItem" image="menu icon" id="ASj-wj-0oG"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="AccountTF" destination="07j-Yj-Oc8" id="86I-8V-vfb"/>
+                        <outlet property="NameTF" destination="lgB-i4-M8u" id="99r-cQ-h8x"/>
+                        <outlet property="sumTF" destination="v8I-Pl-8IB" id="BBz-Ej-ff7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWK-80-SIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1456,6 +1464,9 @@
                                 <state key="normal" title="Прикрепить фото">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="xgE-Nn-nuh" kind="presentation" id="U1U-nT-7u7"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Населенный пункт" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SoO-Dg-zCZ">
                                 <rect key="frame" x="20" y="57" width="560" height="30"/>
@@ -1696,7 +1707,7 @@
                                     <constraint firstAttribute="height" constant="111" id="XJc-7D-1ew"/>
                                 </constraints>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите тип аварии" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5u-2u-o3Q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите тип аварии из списка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5u-2u-o3Q">
                                 <rect key="frame" x="20" y="174" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1715,6 +1726,9 @@
                                 <state key="normal" title="Прикрепить фото">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="qJ0-7K-wyB" kind="presentation" id="rI4-BO-1mN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSw-gM-7nC">
                                 <rect key="frame" x="450" y="535" width="130" height="45"/>
@@ -2385,9 +2399,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="userLastNameTF" destination="lki-MC-dKr" id="yaO-3z-ZRi"/>
-                        <outlet property="userPaymentTF" destination="QOq-rI-qF7" id="UDS-Bb-RdT"/>
-                        <outlet property="userPersonalAccountTF" destination="eUo-h2-yAE" id="TeX-5g-Idp"/>
+                        <outlet property="AccountTF" destination="eUo-h2-yAE" id="c18-7f-0cJ"/>
+                        <outlet property="NameTF" destination="lki-MC-dKr" id="6mm-or-jAY"/>
+                        <outlet property="sumTF" destination="QOq-rI-qF7" id="xX5-ZO-JKv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qt8-r4-U7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2434,6 +2448,100 @@
             </objects>
             <point key="canvasLocation" x="-166" y="7640"/>
         </scene>
+        <!--Report Offence Take Photo View Controller-->
+        <scene sceneID="kpW-X5-qFp">
+            <objects>
+                <viewController id="xgE-Nn-nuh" customClass="ReportOffenceTakePhotoViewController" customModule="EnergyWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fil-bf-epg"/>
+                        <viewControllerLayoutGuide type="bottom" id="2id-ty-3oI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NWx-K5-Ud9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lPm-Oz-Uho">
+                                <rect key="frame" x="20" y="20" width="560" height="506"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="506" id="xTF-bd-yJe"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ra8-Ah-g9R">
+                                <rect key="frame" x="250" y="534" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="G2Z-iV-ds7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Готово"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ra8-Ah-g9R" firstAttribute="centerX" secondItem="lPm-Oz-Uho" secondAttribute="centerX" id="SOQ-io-mIA"/>
+                            <constraint firstItem="lPm-Oz-Uho" firstAttribute="centerX" secondItem="NWx-K5-Ud9" secondAttribute="centerX" id="TWz-88-scr"/>
+                            <constraint firstItem="ra8-Ah-g9R" firstAttribute="top" secondItem="lPm-Oz-Uho" secondAttribute="bottom" constant="8" symbolic="YES" id="Z6K-BZ-roQ"/>
+                            <constraint firstItem="lPm-Oz-Uho" firstAttribute="top" secondItem="fil-bf-epg" secondAttribute="bottom" id="eSm-Fp-9cU"/>
+                            <constraint firstItem="2id-ty-3oI" firstAttribute="top" secondItem="ra8-Ah-g9R" secondAttribute="bottom" constant="36" id="gBR-mH-gPQ"/>
+                            <constraint firstItem="lPm-Oz-Uho" firstAttribute="leading" secondItem="NWx-K5-Ud9" secondAttribute="leadingMargin" id="skD-06-HWu"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sic-mX-fSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="6185"/>
+        </scene>
+        <!--Report Damage Take Photo View Controller-->
+        <scene sceneID="Q3y-8c-ztl">
+            <objects>
+                <viewController id="qJ0-7K-wyB" customClass="ReportDamageTakePhotoViewController" customModule="EnergyWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YwV-gY-fRH"/>
+                        <viewControllerLayoutGuide type="bottom" id="RFV-9E-I6Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lkZ-PE-sUh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZXc-ku-UNn">
+                                <rect key="frame" x="20" y="20" width="560" height="506"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="506" id="B5P-R0-wPg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYF-uz-KcH">
+                                <rect key="frame" x="250" y="534" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="i1L-Fb-Mgp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Готово"/>
+                                <connections>
+                                    <action selector="takePhotoButton:" destination="qJ0-7K-wyB" eventType="touchUpInside" id="NSa-Bp-hX2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RFV-9E-I6Q" firstAttribute="top" secondItem="TYF-uz-KcH" secondAttribute="bottom" constant="36" id="ELM-b2-uWI"/>
+                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="leading" secondItem="lkZ-PE-sUh" secondAttribute="leadingMargin" id="Hnh-m0-Vwr"/>
+                            <constraint firstItem="TYF-uz-KcH" firstAttribute="top" secondItem="ZXc-ku-UNn" secondAttribute="bottom" constant="8" symbolic="YES" id="NnP-0r-6Sx"/>
+                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="centerX" secondItem="lkZ-PE-sUh" secondAttribute="centerX" id="VaX-GA-7TS"/>
+                            <constraint firstItem="TYF-uz-KcH" firstAttribute="centerX" secondItem="ZXc-ku-UNn" secondAttribute="centerX" id="VrV-wR-6UD"/>
+                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="top" secondItem="YwV-gY-fRH" secondAttribute="bottom" id="YRg-H4-pp6"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="capturedImage" destination="ZXc-ku-UNn" id="xb3-SZ-ovf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ee-4H-LiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="6873"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1" width="640" height="1136"/>
@@ -2452,9 +2560,9 @@
         <image name="wallet icon" width="31" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zMQ-28-ljY"/>
-        <segue reference="i6n-he-rvz"/>
-        <segue reference="CJN-tN-0Fx"/>
+        <segue reference="Crv-Ks-U7l"/>
         <segue reference="mj2-e4-ENf"/>
+        <segue reference="CJN-tN-0Fx"/>
+        <segue reference="i6n-he-rvz"/>
     </inferredMetricsTieBreakers>
 </document>

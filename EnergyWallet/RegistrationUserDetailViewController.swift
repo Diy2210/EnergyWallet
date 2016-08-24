@@ -8,62 +8,70 @@
 
 import UIKit
 
-class RegistrationUserDetailViewController: UIViewController, UITextFieldDelegate {
+class RegistrationUserDetailViewController: MyBaseViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var userPersonalAccountTF: UITextField!
-    @IBOutlet weak var userLastNameTF: UITextField!
-    @IBOutlet weak var userPaymentTF: UITextField!
+    @IBOutlet weak var AccountTF: UITextField!
+    @IBOutlet weak var NameTF: UITextField!
+    @IBOutlet weak var sumTF: UITextField!
     
     @IBAction func completeRegistrationButton(sender: AnyObject) {
+        view.endEditing(true)
         
+        let account = AccountTF.text!
+        let lastName = NameTF.text!
+        let payment = sumTF.text!
+        
+        let urlPath = Settings.sharedInstance.serverURL + Settings.sharedInstance.createAccountURI
+        let params = "phone=\(Settings.sharedInstance.phone.URLEncodedString()!)&password=\(Settings.sharedInstance.password.URLEncodedString()!)&account=\(account.URLEncodedString()!)&name=\(lastName.URLEncodedString()!)&sum=\(payment)"
+        let request = self.buildRequest(urlPath, parameters: params)
         let session = NSURLSession.sharedSession()
-        let urlPath = NSURL(string: "http://192.168.0.100:8080/api/account/create")
-        let request = NSMutableURLRequest(URL: urlPath!)
-        let account = userPersonalAccountTF.text!
-        let lastName = userLastNameTF.text!
-        let payment = userPaymentTF.text!
-        let params = "phone=\(account)&email=\(lastName)&password=\(payment)"
-        
-        // Form  is empty
-        //if account.isEmpty || lastName.isEmpty || payment.isEmpty {
-        //    self.messageNotification("Пожалуйста, проверте введенные данные")
-        //    return
-        //}
-        
-        request.HTTPMethod = "POST"
-        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.HTTPBody = params.dataUsingEncoding(NSUTF8StringEncoding)
-        
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
             
             guard error == nil else { return }
+            
+            let httpResponse = response as? NSHTTPURLResponse
+            guard httpResponse!.statusCode < 400 else {
+                print("statusCode: \(httpResponse!.statusCode)")
+                return
+            }
+            
             var json: NSDictionary?
             do {
                 json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
             } catch {
-                print("Complete")
-                return
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.messageNotification("Could not parse JSON")
+                    return
+                })
             }
             if let parseJSON = json {
-                let success = parseJSON["success"] as? Int
-                self.performSegueWithIdentifier("endRegistration", sender: self)
-                print("Success: \(success)")
-                print(parseJSON)
-            }
-            else {
-                
-                let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                print("Error could not parse JSON: \(jsonStr)")
+                let success = parseJSON["success"] as? Bool
+                if success == true {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.performSegueWithIdentifier("endRegistration", sender: self)
+                        return
+                    })
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.messageNotification(parseJSON["message"] as! String)
+                        return
+                    })
+                }
             }
         })
         
         task.resume()
     }
     
-    private func messageNotification(message: String, title: String = "Ошибка") -> Void {
-        let AlertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        AlertView.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(AlertView, animated: true, completion: nil)
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let _ = touches.first {
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches , withEvent:event)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

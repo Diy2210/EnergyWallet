@@ -40,19 +40,7 @@
 	<string>/api/reports/complain</string>
 	<key>phone</key>
 	<string></string>
-	<key>email</key>
-	<string></string>
 	<key>password</key>
-	<string></string>
-	<key>region</key>
-	<string></string>
-	<key>street</key>
-	<string></string>
-	<key>city</key>
-	<string></string>
-	<key>number</key>
-	<string></string>
-	<key>date</key>
 	<string></string>
 </dict>
 </plist>

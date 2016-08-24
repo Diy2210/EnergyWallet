@@ -11,17 +11,20 @@ import UIKit
 class PasswordRecoveryViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userRecoveryPassword: UITextField!
+    
     @IBAction func recoveryPasswordButton(sender: AnyObject) {
+        view.endEditing(true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let _ = touches.first {
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches , withEvent:event)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
