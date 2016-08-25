@@ -8,19 +8,14 @@
 
 import UIKit
 
-class UserAutorizationViewController: UIViewController, UITextFieldDelegate {
+class UserAutorizationViewController: MyBaseViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var userPhone: UITextField!
     @IBOutlet weak var userPassword: UITextField!
     
-    
-    
     @IBAction func loginUserCompleteButton(sender: AnyObject) {
-        view.endEditing(true)
         
-        let session = NSURLSession.sharedSession()
-        let urlPath = NSURL(string: "http://192.168.0.100:8080/api/login")
-        let request = NSMutableURLRequest(URL: urlPath!)
         let phone = userPhone.text!
         let password = userPassword.text!
         
@@ -30,66 +25,24 @@ class UserAutorizationViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        let params = "phone=\(phone)&password=\(password)"
-        request.HTTPMethod = "POST"
-        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.HTTPBody = params.dataUsingEncoding(NSUTF8StringEncoding)
+        let urlPath = Settings.sharedInstance.serverURL + Settings.sharedInstance.loginUserURI
+        let params = "phone=\(phone.URLEncodedString()!)&password=\(password.URLEncodedString()!)"
         
-        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            
-            guard error == nil else { return }
-            var json: NSDictionary?
-            do {
-                json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
-            } catch {
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.messageNotification("Could not parse JSON")
-                    return
-                })
-            }
-            if let parseJSON = json {
-                let success = parseJSON["success"] as? Bool
-                if success == true {
-                    // save phone & password into Settings
-                    Settings.sharedInstance.phone = phone
-                    Settings.sharedInstance.password = password
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self.performSegueWithIdentifier("login", sender: self)
-                    })
-                } else {
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self.messageNotification("Телефон или пароль указан неверно. Пожалуйста, проверьте введенные данные.")
-                    })
-                    return
-                }
-            } else {
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.messageNotification("Could not parse response")
-                    return
-                })
-            }
-        })
-        
+        let task = self.sendRequest(urlPath, parameters: params, phone: phone, password: password, segue: "login")
         task.resume()
     }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let _ = touches.first {
-            view.endEditing(true)
-        }
-        super.touchesBegan(touches , withEvent:event)
-    }
-    
+
+
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    // Messege notification
-    private func messageNotification(message: String, title: String = "Ошибка") -> Void {
-        let AlertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        AlertView.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(AlertView, animated: true, completion: nil)
+    func textFieldDidBeginEditing(textField: UITextField) {
+        ScrollView.setContentOffset(CGPointMake(0,180), animated: true)
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        ScrollView.setContentOffset(CGPointMake(0,0), animated: true)
     }
 }

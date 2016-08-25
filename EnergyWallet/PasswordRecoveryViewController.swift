@@ -10,21 +10,22 @@ import UIKit
 
 class PasswordRecoveryViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var userRecoveryPassword: UITextField!
     
     @IBAction func recoveryPasswordButton(sender: AnyObject) {
-        view.endEditing(true)
-    }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let _ = touches.first {
-            view.endEditing(true)
-        }
-        super.touchesBegan(touches , withEvent:event)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        ScrollView.setContentOffset(CGPointMake(0,80), animated: true)
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        ScrollView.setContentOffset(CGPointMake(0,0), animated: true)
     }
 }
