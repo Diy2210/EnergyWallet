@@ -92,12 +92,23 @@
                                     <segue destination="F2P-Td-LIj" kind="presentation" id="IOk-OW-TBA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавленные адреса" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHn-i4-k2A">
+                                <rect key="frame" x="215" y="221" width="171" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PeQ-8b-tIx"/>
+                                    <constraint firstAttribute="width" constant="171" id="mJv-3n-JOA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EEb-GC-Iew" firstAttribute="top" secondItem="PWo-RT-ekG" secondAttribute="bottom" id="EVl-uf-gbP"/>
                             <constraint firstItem="EEb-GC-Iew" firstAttribute="leading" secondItem="tzi-yU-0nK" secondAttribute="leading" id="JdX-ip-8C9"/>
                             <constraint firstItem="FZm-Yo-7xW" firstAttribute="top" secondItem="T7D-Jj-E0C" secondAttribute="bottom" constant="8" symbolic="YES" id="MWB-Zh-E5z"/>
+                            <constraint firstItem="sHn-i4-k2A" firstAttribute="centerX" secondItem="FZm-Yo-7xW" secondAttribute="centerX" id="NCz-2S-Meb"/>
                             <constraint firstItem="T7D-Jj-E0C" firstAttribute="leading" secondItem="bJA-EE-onA" secondAttribute="leading" id="WvL-e8-iKp"/>
                             <constraint firstItem="FZm-Yo-7xW" firstAttribute="centerX" secondItem="tzi-yU-0nK" secondAttribute="centerX" id="ZZ0-HT-CTf"/>
                             <constraint firstItem="FZm-Yo-7xW" firstAttribute="leading" secondItem="tzi-yU-0nK" secondAttribute="leadingMargin" constant="44" id="b4W-BU-CQA"/>
@@ -108,6 +119,7 @@
                             <constraint firstItem="T7D-Jj-E0C" firstAttribute="trailing" secondItem="bJA-EE-onA" secondAttribute="trailing" id="s7S-XA-j1e"/>
                             <constraint firstItem="EEb-GC-Iew" firstAttribute="bottom" secondItem="bdE-Sy-dNS" secondAttribute="top" id="tu3-f3-5VX"/>
                             <constraint firstItem="bJA-EE-onA" firstAttribute="leading" secondItem="tzi-yU-0nK" secondAttribute="leadingMargin" id="wwR-Kr-NJq"/>
+                            <constraint firstItem="sHn-i4-k2A" firstAttribute="top" secondItem="FZm-Yo-7xW" secondAttribute="bottom" constant="33" id="xiD-E5-8h3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VsH-V4-P4l">
@@ -2036,13 +2048,13 @@
                                     <segue destination="GeA-5A-KxQ" kind="presentation" id="zMQ-28-ljY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnA-4d-eD6">
-                                <rect key="frame" x="251" y="487" width="98" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2016. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnA-4d-eD6">
+                                <rect key="frame" x="132" y="487" width="336" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="d8g-BX-Q6v"/>
-                                    <constraint firstAttribute="width" constant="98" id="t3q-38-KBb"/>
+                                    <constraint firstAttribute="height" constant="30" id="Rlp-wX-eeV"/>
+                                    <constraint firstAttribute="width" constant="336" id="Zb2-jC-oRG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="logoSmall" translatesAutoresizingMaskIntoConstraints="NO" id="zpb-f1-vQr">
@@ -2053,12 +2065,12 @@
                         <constraints>
                             <constraint firstItem="sRp-PN-Hfl" firstAttribute="top" secondItem="RHf-xZ-ph8" secondAttribute="bottom" constant="8" symbolic="YES" id="Mmc-cb-38E"/>
                             <constraint firstItem="zpb-f1-vQr" firstAttribute="top" secondItem="FgL-Jp-zho" secondAttribute="bottom" constant="8" symbolic="YES" id="O3S-aS-wvI"/>
-                            <constraint firstItem="pnA-4d-eD6" firstAttribute="top" secondItem="1Hi-wo-JuM" secondAttribute="bottom" constant="8" symbolic="YES" id="Pny-8p-cCp"/>
+                            <constraint firstItem="RHf-xZ-ph8" firstAttribute="top" secondItem="pnA-4d-eD6" secondAttribute="bottom" constant="45" id="Ubm-DO-VGX"/>
                             <constraint firstItem="zpb-f1-vQr" firstAttribute="centerX" secondItem="1Hi-wo-JuM" secondAttribute="centerX" id="V59-Zs-ini"/>
-                            <constraint firstItem="pnA-4d-eD6" firstAttribute="centerX" secondItem="RHf-xZ-ph8" secondAttribute="centerX" id="ZQ8-9d-V38"/>
+                            <constraint firstItem="pnA-4d-eD6" firstAttribute="top" secondItem="1Hi-wo-JuM" secondAttribute="bottom" constant="8" symbolic="YES" id="VR1-Dk-G4x"/>
+                            <constraint firstItem="pnA-4d-eD6" firstAttribute="centerX" secondItem="RHf-xZ-ph8" secondAttribute="centerX" id="c10-GO-S3d"/>
                             <constraint firstItem="1Hi-wo-JuM" firstAttribute="trailing" secondItem="RHf-xZ-ph8" secondAttribute="trailing" id="dHw-0G-bUh"/>
                             <constraint firstItem="1Hi-wo-JuM" firstAttribute="top" secondItem="zpb-f1-vQr" secondAttribute="bottom" constant="11" id="jB3-Mh-XD2"/>
-                            <constraint firstItem="RHf-xZ-ph8" firstAttribute="top" secondItem="pnA-4d-eD6" secondAttribute="bottom" constant="45" id="pjk-xs-yOK"/>
                             <constraint firstItem="1Hi-wo-JuM" firstAttribute="leading" secondItem="RHf-xZ-ph8" secondAttribute="leading" id="vG5-8B-xMM"/>
                             <constraint firstItem="zpb-f1-vQr" firstAttribute="centerX" secondItem="rD8-VE-0L1" secondAttribute="centerX" id="w3o-AE-dYn"/>
                         </constraints>
@@ -2866,11 +2878,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zMQ-28-ljY"/>
-        <segue reference="Afu-ue-rJ5"/>
-        <segue reference="DQG-aH-OWI"/>
-        <segue reference="X8C-WI-lYn"/>
-        <segue reference="mj2-e4-ENf"/>
         <segue reference="JQc-aM-Kna"/>
+        <segue reference="mj2-e4-ENf"/>
+        <segue reference="X8C-WI-lYn"/>
+        <segue reference="DQG-aH-OWI"/>
+        <segue reference="Afu-ue-rJ5"/>
         <segue reference="jdk-5O-Xdg"/>
         <segue reference="hDw-Ki-UqP"/>
     </inferredMetricsTieBreakers>
