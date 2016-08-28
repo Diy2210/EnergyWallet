@@ -39,7 +39,7 @@ class UserAutorizationViewController: MyBaseViewController, UITextFieldDelegate 
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        ScrollView.setContentOffset(CGPointMake(0,180), animated: true)
+        ScrollView.setContentOffset(CGPointMake(0,250), animated: true)
     }
     
     func textFieldDidEndEditing(textField: UITextField) {

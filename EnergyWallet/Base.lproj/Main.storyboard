@@ -42,7 +42,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MvC-BB-NjN">
-                        <barButtonItem key="leftBarButtonItem" image="search icon" id="IAu-pa-n8v"/>
+                        <barButtonItem key="leftBarButtonItem" image="search icon" id="IAu-pa-n8v">
+                            <connections>
+                                <action selector="searchBarButton:" destination="ops-yl-tem" id="UGA-Xg-aLs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="menu icon" id="3VA-af-iTH"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -123,7 +128,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VsH-V4-P4l">
-                        <barButtonItem key="leftBarButtonItem" image="search icon" id="Al4-6i-9iU"/>
+                        <barButtonItem key="leftBarButtonItem" image="search icon" id="Al4-6i-9iU">
+                            <connections>
+                                <action selector="searchBarButton:" destination="iQl-gV-4Rn" id="BRX-pH-k8c"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="menu icon" id="sca-v5-0Ld"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -212,7 +222,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="437-XR-1Z6">
-                        <barButtonItem key="leftBarButtonItem" image="search icon" id="pkX-u6-pJq"/>
+                        <barButtonItem key="leftBarButtonItem" image="search icon" id="pkX-u6-pJq">
+                            <connections>
+                                <action selector="searchBarButton:" destination="B9W-AE-ttS" id="rhv-TF-LH8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="menu icon" id="qQF-L9-rru"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -587,7 +602,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="n4r-zu-Tk2">
-                        <barButtonItem key="leftBarButtonItem" image="search icon" id="hvS-Gs-9Li"/>
+                        <barButtonItem key="leftBarButtonItem" image="search icon" id="hvS-Gs-9Li">
+                            <connections>
+                                <action selector="searchBarButton:" destination="aj0-P0-rSk" id="Sq8-cg-ncG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="menu icon" id="MUT-MF-irs"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -738,7 +758,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="qPy-Fw-tca">
-                        <barButtonItem key="leftBarButtonItem" image="search icon" id="UxO-Ev-isS"/>
+                        <barButtonItem key="leftBarButtonItem" image="search icon" id="UxO-Ev-isS">
+                            <connections>
+                                <action selector="searchBarButton:" destination="epE-Dy-yoL" id="Tkj-4r-rMY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="menu icon" id="GoI-wD-18I"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -812,7 +837,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="QhQ-QM-4TU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="tintColor" red="0.41960784309999999" green="0.81568627449999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Войти">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -854,7 +879,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="EqH-4U-VhL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="tintColor" red="0.41960784309999999" green="0.81568627449999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Зарегистрироваться">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1015,7 +1040,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="4Jl-Fs-iVA"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="tintColor" red="0.41960784309999999" green="0.81568627449999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Далее">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1027,8 +1052,8 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2AV-Aj-onf">
                                         <rect key="frame" x="64" y="468" width="473" height="30"/>
                                         <color key="textColor" red="0.36078431370000003" green="0.7725490196" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="4lC-13-6vV" id="u98-zS-0SF"/>
                                         </connections>
@@ -1047,11 +1072,11 @@
                                             <segue destination="GYw-Xq-ioZ" kind="presentation" id="CJN-tN-0Fx"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="js0-HN-VTR">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+380" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="js0-HN-VTR">
                                         <rect key="frame" x="64" y="430" width="473" height="30"/>
                                         <color key="textColor" red="0.36078431370000003" green="0.7725490196" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                         <connections>
                                             <outlet property="delegate" destination="4lC-13-6vV" id="i0I-kN-vMO"/>
                                         </connections>
@@ -1120,7 +1145,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l5g-Fg-7Md">
                                         <rect key="frame" x="64" y="356" width="473" height="30"/>
                                         <color key="textColor" red="0.36078431370000003" green="0.7725490196" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="bo0-yh-XJQ" id="san-Le-MZi"/>
@@ -1149,7 +1174,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HmH-sl-Dph">
                                         <rect key="frame" x="64" y="425" width="473" height="30"/>
                                         <color key="textColor" red="0.36078431370000003" green="0.7725490196" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="bo0-yh-XJQ" id="Ogy-M7-SEZ"/>
@@ -1161,7 +1186,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="TeT-6E-ab4"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Завершить регистрацию">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1212,11 +1237,11 @@
                                         <color key="textColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона +380..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cmn-yY-3PP">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+380" borderStyle="roundedRect" placeholder="Номер телефона +380..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cmn-yY-3PP">
                                         <rect key="frame" x="64" y="285" width="473" height="30"/>
                                         <color key="textColor" red="0.36078431370000003" green="0.7725490196" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                         <connections>
                                             <outlet property="delegate" destination="bo0-yh-XJQ" id="Gkc-w2-HK0"/>
                                         </connections>
@@ -1275,7 +1300,7 @@
                         <outlet property="userEmailRegistration" destination="l5g-Fg-7Md" id="Syl-a5-BMh"/>
                         <outlet property="userPasswordRegistration" destination="HmH-sl-Dph" id="Dnx-6f-YXb"/>
                         <outlet property="userPhoneRegistration" destination="Cmn-yY-3PP" id="NT4-oL-77G"/>
-                        <segue destination="v6U-wm-XlP" kind="presentation" identifier="createUser" id="YcP-VM-PYp"/>
+                        <segue destination="ayd-s0-Hff" kind="presentation" identifier="createUser" id="Ptq-ar-Gbg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eys-J4-4LB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1303,7 +1328,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="MvU-ff-cb0"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Восстановить пароль">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1331,7 +1356,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ваш E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ga4-1J-MM3">
                                         <rect key="frame" x="64" y="402" width="473" height="30"/>
                                         <color key="textColor" red="0.36078431370000003" green="0.7725490196" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="Zli-Bi-gKC" id="0se-3n-sqL"/>
@@ -2549,7 +2574,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Txg-7S-1yt"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Завершить регистрацию">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -2877,13 +2902,13 @@
         <image name="wallet icon" width="31" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zMQ-28-ljY"/>
-        <segue reference="JQc-aM-Kna"/>
+        <segue reference="AuY-hI-RcV"/>
+        <segue reference="CJN-tN-0Fx"/>
         <segue reference="mj2-e4-ENf"/>
-        <segue reference="X8C-WI-lYn"/>
-        <segue reference="DQG-aH-OWI"/>
-        <segue reference="Afu-ue-rJ5"/>
+        <segue reference="i6n-he-rvz"/>
+        <segue reference="Ptq-ar-Gbg"/>
         <segue reference="jdk-5O-Xdg"/>
         <segue reference="hDw-Ki-UqP"/>
+        <segue reference="JQc-aM-Kna"/>
     </inferredMetricsTieBreakers>
 </document>
