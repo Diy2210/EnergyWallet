@@ -27,16 +27,4 @@ class CounterViewController: UIViewController {
         imageView.image = image
         navigationItem.titleView = imageView
     }
-
-    // Search bar button
-    @IBAction func searchBarButton(sender: AnyObject) {
-        
-        let alertController = UIAlertController(title: "Поиск по адресу", message: "В разработке...", preferredStyle: .Alert)
-        
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        presentViewController(alertController, animated: true, completion: nil)
-    }
-    
 }

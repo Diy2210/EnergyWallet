@@ -15,7 +15,6 @@
 		1D2631051D671A5B00FBD358 /* ReportDamageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2631041D671A5B00FBD358 /* ReportDamageViewController.swift */; };
 		1D4194C61D605FD3005336A9 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D4194C51D605FD3005336A9 /* Settings.plist */; };
 		1D6E240A1D51248B00D47BF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E24091D51248B00D47BF3 /* AppDelegate.swift */; };
-		1D6E240C1D51248B00D47BF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E240B1D51248B00D47BF3 /* ViewController.swift */; };
 		1D6E240F1D51248B00D47BF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D6E240D1D51248B00D47BF3 /* Main.storyboard */; };
 		1D6E24121D51248B00D47BF3 /* EnergyWallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E24101D51248B00D47BF3 /* EnergyWallet.xcdatamodeld */; };
 		1D6E24141D51248B00D47BF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D6E24131D51248B00D47BF3 /* Assets.xcassets */; };
@@ -35,6 +34,7 @@
 		1D80726D1D6DD4E700B008B8 /* ReportOffenceTakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80726C1D6DD4E700B008B8 /* ReportOffenceTakePhotoViewController.swift */; };
 		1D80726F1D6DD50100B008B8 /* ReportDamageTakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D80726E1D6DD50100B008B8 /* ReportDamageTakePhotoViewController.swift */; };
 		1D8072711D6DD52900B008B8 /* TransferCounterTakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8072701D6DD52900B008B8 /* TransferCounterTakePhotoViewController.swift */; };
+		1DB5D0701D74AF5D00B57628 /* SearhAdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB5D06F1D74AF5D00B57628 /* SearhAdressViewController.swift */; };
 		1DFA12001D6C4FC10001E61B /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFA11FF1D6C4FC10001E61B /* OtherViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +65,6 @@
 		1D4194C51D605FD3005336A9 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		1D6E24061D51248B00D47BF3 /* EnergyWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnergyWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6E24091D51248B00D47BF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D6E240B1D51248B00D47BF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1D6E240E1D51248B00D47BF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D6E24111D51248B00D47BF3 /* EnergyWallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EnergyWallet.xcdatamodel; sourceTree = "<group>"; };
 		1D6E24131D51248B00D47BF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		1D80726C1D6DD4E700B008B8 /* ReportOffenceTakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportOffenceTakePhotoViewController.swift; sourceTree = "<group>"; };
 		1D80726E1D6DD50100B008B8 /* ReportDamageTakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDamageTakePhotoViewController.swift; sourceTree = "<group>"; };
 		1D8072701D6DD52900B008B8 /* TransferCounterTakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferCounterTakePhotoViewController.swift; sourceTree = "<group>"; };
+		1DB5D06F1D74AF5D00B57628 /* SearhAdressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearhAdressViewController.swift; sourceTree = "<group>"; };
 		1DFA11FF1D6C4FC10001E61B /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,7 +145,6 @@
 				1D6E243B1D51259C00D47BF3 /* Settings.swift */,
 				1D80726A1D6DBCCF00B008B8 /* MyBaseViewController.swift */,
 				1D6E24091D51248B00D47BF3 /* AppDelegate.swift */,
-				1D6E240B1D51248B00D47BF3 /* ViewController.swift */,
 				1D6E243C1D51259C00D47BF3 /* WelcomeSplashScreen.swift */,
 				1D6E243E1D51259C00D47BF3 /* UserAutorizationViewController.swift */,
 				1D6E24401D51259C00D47BF3 /* RegistrationUserViewController.swift */,
@@ -164,6 +163,7 @@
 				1D2631041D671A5B00FBD358 /* ReportDamageViewController.swift */,
 				1D80726E1D6DD50100B008B8 /* ReportDamageTakePhotoViewController.swift */,
 				1DFA11FF1D6C4FC10001E61B /* OtherViewController.swift */,
+				1DB5D06F1D74AF5D00B57628 /* SearhAdressViewController.swift */,
 				1D6E240D1D51248B00D47BF3 /* Main.storyboard */,
 				1D6E24131D51248B00D47BF3 /* Assets.xcassets */,
 				1D6E24151D51248B00D47BF3 /* LaunchScreen.storyboard */,
@@ -328,11 +328,11 @@
 				1D80726B1D6DBCCF00B008B8 /* MyBaseViewController.swift in Sources */,
 				1D6E244A1D51259C00D47BF3 /* PasswordRecoveryViewController.swift in Sources */,
 				1DFA12001D6C4FC10001E61B /* OtherViewController.swift in Sources */,
+				1DB5D0701D74AF5D00B57628 /* SearhAdressViewController.swift in Sources */,
 				1D2631011D67192D00FBD358 /* TransferCounterViewController.swift in Sources */,
 				1D2631031D6719F800FBD358 /* ReportOffenseViewController.swift in Sources */,
 				1D6E24121D51248B00D47BF3 /* EnergyWallet.xcdatamodeld in Sources */,
 				1D8072711D6DD52900B008B8 /* TransferCounterTakePhotoViewController.swift in Sources */,
-				1D6E240C1D51248B00D47BF3 /* ViewController.swift in Sources */,
 				1D6E244E1D51259C00D47BF3 /* AddressViewController.swift in Sources */,
 				1D6E24511D51266000D47BF3 /* DisconnectionViewController.swift in Sources */,
 				1D2631051D671A5B00FBD358 /* ReportDamageViewController.swift in Sources */,

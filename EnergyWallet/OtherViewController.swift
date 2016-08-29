@@ -21,27 +21,4 @@ class OtherViewController: UIViewController, UITextFieldDelegate {
         imageView.image = image
         navigationItem.titleView = imageView
     }
-    
-    // Search button
-    @IBAction func searchButton(sender: AnyObject) {
-        
-        let alertController = UIAlertController(title: "Поиск по адресу", message: "В разработке...", preferredStyle: .Alert)
-        
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        presentViewController(alertController, animated: true, completion: nil)
-    }
-    
-    // Search bar button
-    @IBAction func searchBarButton(sender: AnyObject) {
-        
-        let alertController = UIAlertController(title: "Поиск по адресу", message: "В разработке...", preferredStyle: .Alert)
-        
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        presentViewController(alertController, animated: true, completion: nil)
-    }
-    
 }
