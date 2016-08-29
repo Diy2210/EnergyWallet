@@ -30,7 +30,7 @@ class RegistrationUserViewController: MyBaseViewController, UITextFieldDelegate 
         let urlPath = Settings.sharedInstance.serverURL + Settings.sharedInstance.createUserURI
         let params = "phone=\(phone.URLEncodedString()!)&email=\(email.URLEncodedString()!)&password=\(password.URLEncodedString()!)"
         
-        let task = self.sendRequest(urlPath, parameters: params, phone: phone, password: password, segue: " createUser")
+        let task = self.sendRequest(urlPath, parameters: params, phone: phone, password: password, segue: "createUser")
         
         task.resume()
         
