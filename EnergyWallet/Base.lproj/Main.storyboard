@@ -205,12 +205,23 @@
                                     <segue destination="GqO-8l-elE" kind="presentation" id="uBB-NP-NqK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавленные счетчики" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMc-z0-6Bc">
+                                <rect key="frame" x="215" y="203" width="171" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="AQK-0e-Keo"/>
+                                    <constraint firstAttribute="height" constant="21" id="KC7-h7-Wa9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lrE-xq-e7N" firstAttribute="trailing" secondItem="v1q-fY-zwT" secondAttribute="trailing" id="1I9-OO-mxb"/>
                             <constraint firstItem="m45-Th-GcI" firstAttribute="top" secondItem="v1q-fY-zwT" secondAttribute="bottom" constant="8" symbolic="YES" id="FNN-g6-HBa"/>
                             <constraint firstItem="v1q-fY-zwT" firstAttribute="top" secondItem="lrE-xq-e7N" secondAttribute="bottom" constant="8" symbolic="YES" id="HaE-bg-r9t"/>
+                            <constraint firstItem="VMc-z0-6Bc" firstAttribute="top" secondItem="m45-Th-GcI" secondAttribute="bottom" constant="8" symbolic="YES" id="QIv-LU-1BQ"/>
                             <constraint firstItem="O83-ab-M83" firstAttribute="bottom" secondItem="f1y-xu-LET" secondAttribute="top" id="S9f-8z-3pj"/>
                             <constraint firstItem="O83-ab-M83" firstAttribute="top" secondItem="0Mq-MV-BWh" secondAttribute="bottom" id="ScT-Qj-wgR"/>
                             <constraint firstItem="v1q-fY-zwT" firstAttribute="trailing" secondItem="m45-Th-GcI" secondAttribute="trailing" id="Uoa-dx-dAa"/>
@@ -219,6 +230,7 @@
                             <constraint firstItem="m45-Th-GcI" firstAttribute="trailing" secondItem="wVw-fH-6tg" secondAttribute="trailing" id="b2B-9Q-RbU"/>
                             <constraint firstItem="lrE-xq-e7N" firstAttribute="leading" secondItem="v1q-fY-zwT" secondAttribute="leading" id="baL-MF-fpk"/>
                             <constraint firstItem="v1q-fY-zwT" firstAttribute="leading" secondItem="m45-Th-GcI" secondAttribute="leading" id="bnO-NM-ZxG"/>
+                            <constraint firstItem="VMc-z0-6Bc" firstAttribute="centerX" secondItem="KqS-T2-j1B" secondAttribute="centerX" id="ir1-JK-lCV"/>
                             <constraint firstItem="lrE-xq-e7N" firstAttribute="top" secondItem="0Mq-MV-BWh" secondAttribute="bottom" constant="8" symbolic="YES" id="k9c-gu-kRF"/>
                             <constraint firstItem="O83-ab-M83" firstAttribute="centerX" secondItem="v1q-fY-zwT" secondAttribute="centerX" id="krc-hE-jsk"/>
                             <constraint firstAttribute="trailing" secondItem="O83-ab-M83" secondAttribute="trailing" id="m9b-Sc-c6I"/>
@@ -382,7 +394,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="taa-hD-dSa"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -1835,7 +1846,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="WlS-Yv-AKj">
                         <barButtonItem key="leftBarButtonItem" image="search icon" id="WkP-PR-4GV"/>
                         <barButtonItem key="rightBarButtonItem" image="menu icon" id="l1Q-o4-WP0"/>
@@ -2050,7 +2060,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="0lm-km-89g">
                         <barButtonItem key="leftBarButtonItem" image="search icon" id="w5r-RL-Kkq"/>
                         <barButtonItem key="rightBarButtonItem" image="menu icon" id="Iy6-Sm-Dv7"/>
@@ -3080,14 +3089,14 @@
         <image name="wallet icon" width="31" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8DA-9d-BI3"/>
-        <segue reference="rWR-oW-DHf"/>
-        <segue reference="JQc-aM-Kna"/>
-        <segue reference="jdk-5O-Xdg"/>
-        <segue reference="DQG-aH-OWI"/>
-        <segue reference="Afu-ue-rJ5"/>
-        <segue reference="X8C-WI-lYn"/>
+        <segue reference="Gjw-BF-TMv"/>
         <segue reference="XvF-eQ-RMm"/>
+        <segue reference="Sqt-KD-DU8"/>
+        <segue reference="JQc-aM-Kna"/>
+        <segue reference="i6n-he-rvz"/>
+        <segue reference="drC-Ve-NfY"/>
+        <segue reference="Afu-ue-rJ5"/>
         <segue reference="hDw-Ki-UqP"/>
+        <segue reference="jdk-5O-Xdg"/>
     </inferredMetricsTieBreakers>
 </document>
