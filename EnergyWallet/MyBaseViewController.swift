@@ -11,53 +11,70 @@ import UIKit
 class MyBaseViewController: UIViewController {
 
     var lastResponse: NSMutableDictionary = [:]
+    var activityIndicator: UIActivityIndicatorView!
+    
+    // Activity Indicator Function
+    func addActivityIndicator() {
+        activityIndicator = UIActivityIndicatorView(frame: view.bounds)
+        activityIndicator.activityIndicatorViewStyle = .whiteLarge
+        activityIndicator.backgroundColor = UIColor(white: 0, alpha: 0.25)
+        activityIndicator.startAnimating()
+        view.addSubview(activityIndicator)
+    }
+    
+    func removeActivityIndicator() {
+        activityIndicator.removeFromSuperview()
+        activityIndicator = nil
+    }
+    
     
     // Messege notification
     func messageNotification(message: String, title: String = "Ошибка") -> Void {
-        let AlertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        AlertView.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(AlertView, animated: true, completion: nil)
+        let AlertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        AlertView.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(AlertView, animated: true, completion: nil)
     }
     
     // Build request
     func buildRequest(url: String, parameters: String) -> NSMutableURLRequest {
-        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
-        request.HTTPMethod = "POST"
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.HTTPBody = parameters.dataUsingEncoding(NSUTF8StringEncoding)
+        request.httpBody = parameters.data(using: .utf8)
+        addActivityIndicator()
         return request
     }
     
     // Send request
-    func sendRequest(urlPath: String, parameters: String, phone: String, password: String, segue: String) -> NSURLSessionDataTask {
+    func sendRequest(urlPath: String, parameters: String, phone: String, password: String, segue: String) -> URLSessionDataTask {
         // reset lastResponse
         self.lastResponse = [:]
-        let request = self.buildRequest(urlPath, parameters: parameters)
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+        let request = self.buildRequest(url: urlPath, parameters: parameters)
+        let session = URLSession.shared
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
             
             guard error == nil else { return }
             
-            let httpResponse = response as? NSHTTPURLResponse
+            let httpResponse = response as? HTTPURLResponse
             guard httpResponse!.statusCode < 400 else {
                 if httpResponse!.statusCode == 401 {
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self.performSegueWithIdentifier("Autorization", sender: self)
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "Autorization", sender: self)
                         return
-                    })
+                    }
                 }
                 return
             }
             
             var json: NSDictionary?
             do {
-                json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
+                json = try JSONSerialization.jsonObject(with: data!, options: .mutableLeaves) as? NSDictionary
             } catch {
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.messageNotification("Could not parse JSON")
+                DispatchQueue.main.async {
+                    self.messageNotification(message: "Could not parse JSON")
                     return
-                })
+                }
             }
             if let parseJSON = json {
                 let success = parseJSON["success"] as? Bool
@@ -69,26 +86,29 @@ class MyBaseViewController: UIViewController {
                         Settings.sharedInstance.phone = phone
                         Settings.sharedInstance.password = password
                     }
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self.performSegueWithIdentifier(segue, sender: self)
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: segue, sender: self)
                         return
-                    })
+                    }
                 } else {
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self.messageNotification(parseJSON["message"] as! String)
+                    DispatchQueue.main.async {
+                        self.messageNotification(message: parseJSON["message"] as! String)
                         return
-                    })
+                    }
                 }
             }
         })
+       
         return task
     }
 }
 
 extension String {
     func URLEncodedString() -> String? {
-        let customAllowedSet = NSCharacterSet(charactersInString:"=+\"#%/<>?@\\^`{|}").invertedSet
-        let escapedString = self.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)
-        return escapedString
+        let customAllowedSet = NSCharacterSet(charactersIn:"=+\"#%/<>?@\\^`{|}").inverted
+        //let escapedString = self.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)
+        let urlwithPercentEscapes = self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        return urlwithPercentEscapes
     }
 }
+

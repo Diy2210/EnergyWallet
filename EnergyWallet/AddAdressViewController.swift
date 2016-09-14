@@ -19,40 +19,38 @@ class AddAdressViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var notificationLabel: UILabel!
     
     // Switch button
-    @IBAction func swithButton(sender: AnyObject) {
-        if theSwitch.on {
+    @IBAction func swithButton(_ sender: AnyObject) {
+        if theSwitch.isOn {
             notificationLabel.text = "Уведомлять об отключениях"
         }else{
             notificationLabel.text = "Не уведомлять об отключениях"
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         let navigationBar = self.navigationController?.navigationBar
-        navigationBar?.barStyle = UIBarStyle.Default
-        navigationBar?.tintColor = UIColor.blackColor()
+        navigationBar?.barStyle = UIBarStyle.default
+        navigationBar?.tintColor = UIColor.black
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        imageView.contentMode = .ScaleAspectFit
+        imageView.contentMode = .scaleAspectFit
         let image = UIImage(named: "logo")
         imageView.image = image
         navigationItem.titleView = imageView
     }
     
     // Add button
-    @IBAction func addButton(sender: AnyObject) {
-      
-        
+    @IBAction func addButton(_ sender: AnyObject) {
   }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let _ = touches.first {
             view.endEditing(true)
         }
-        super.touchesBegan(touches , withEvent:event)
+        super.touchesBegan(touches , with:event)
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }

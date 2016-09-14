@@ -22,18 +22,18 @@ class Settings {
     
     required init() {
         
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray
         let documentsDirectory = paths[0]
-        self.path = documentsDirectory.stringByAppendingPathComponent("Settings.plist")
+        self.path = (documentsDirectory as AnyObject).appendingPathComponent("Settings.plist")
         
-        let fileManager = NSFileManager.defaultManager()
+        let fileManager = FileManager.default
         
         // check if file exists
-        if !fileManager.fileExistsAtPath(self.path) {
+        if !fileManager.fileExists(atPath: self.path) {
             // If it doesn't, copy it from the default file in the Bundle
-            if let bundlePath = NSBundle.mainBundle().pathForResource("Settings", ofType: "plist") {
+            if let bundlePath = Bundle.main.path(forResource: "Settings", ofType: "plist") {
                 do {
-                    try fileManager.copyItemAtPath(bundlePath, toPath: self.path)
+                    try fileManager.copyItem(atPath: bundlePath, toPath: self.path)
                 } catch {
                     print("Something wrong while copiying plist file")
                 }
@@ -51,7 +51,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "EneryWalletEndPoint")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -62,7 +62,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "CreateUserURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -73,7 +73,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "LoginUserURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -84,7 +84,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "GetRegionURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -95,7 +95,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "GetStreetURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -106,7 +106,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "GetStatisticsURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -117,7 +117,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "GetBlackoutCityURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -128,7 +128,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "GetBlackoutStreetURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -139,7 +139,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "GetBlackoutAdress")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -150,7 +150,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "CreateAccountURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -161,7 +161,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "CreateAccountAdressURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -172,7 +172,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "GetAdressListURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -183,7 +183,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "DeleteAccountAdressURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -194,7 +194,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "ReportsAlarmsURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -205,7 +205,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "ReportsComplainURI")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -216,7 +216,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "phone")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -227,7 +227,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "email")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -238,7 +238,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "password")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -249,7 +249,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "region")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -260,7 +260,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "street")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -271,7 +271,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "city")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -282,7 +282,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "number")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
     
@@ -293,7 +293,7 @@ class Settings {
         }
         set(newValue) {
             settings.setValue(newValue, forKey: "date")
-            settings.writeToFile(path, atomically: false)
+            settings.write(toFile: path, atomically: false)
         }
     }
 }

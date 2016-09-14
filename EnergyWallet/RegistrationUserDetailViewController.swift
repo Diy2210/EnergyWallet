@@ -16,7 +16,7 @@ class RegistrationUserDetailViewController: MyBaseViewController, UITextFieldDel
     @IBOutlet weak var NameTF: UITextField!
     @IBOutlet weak var sumTF: UITextField!
     
-    @IBAction func completeRegistrationButton(sender: AnyObject) {
+    @IBAction func completeRegistrationButton(_ sender: AnyObject) {
         
         let account = AccountTF.text!
         let name = NameTF.text!
@@ -25,21 +25,21 @@ class RegistrationUserDetailViewController: MyBaseViewController, UITextFieldDel
         let urlPath = Settings.sharedInstance.serverURL + Settings.sharedInstance.createAccountURI
         let params = "phone=\(Settings.sharedInstance.phone.URLEncodedString()!)&password=\(Settings.sharedInstance.password.URLEncodedString()!)&account=\(account.URLEncodedString()!)&name=\(name.URLEncodedString()!)&sum=\(payment)"
         
-        let task = self.sendRequest(urlPath, parameters: params, phone:  Settings.sharedInstance.phone, password:  Settings.sharedInstance.password, segue: "endRegistration")
+        let task = self.sendRequest(urlPath: urlPath, parameters: params, phone:  Settings.sharedInstance.phone, password:  Settings.sharedInstance.password, segue: "endRegistration")
         
         task.resume()
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
-        ScrollView.setContentOffset(CGPointMake(0,220), animated: true)
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        ScrollView.setContentOffset(CGPoint(x: 0,y: 220), animated: true)
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
-        ScrollView.setContentOffset(CGPointMake(0,0), animated: true)
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        ScrollView.setContentOffset(CGPoint(x: 0,y: 0), animated: true)
     }
 }

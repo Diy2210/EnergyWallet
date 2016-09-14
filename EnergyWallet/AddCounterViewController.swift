@@ -23,13 +23,13 @@ class AddCounterViewController: MyBaseViewController, UITextFieldDelegate {
         
         let urlPath = Settings.sharedInstance.serverURL + Settings.sharedInstance.createAccountURI
         let params = "phone=\(Settings.sharedInstance.phone.URLEncodedString()!)&password=\(Settings.sharedInstance.password.URLEncodedString()!)&account=\(account.URLEncodedString()!)&name=\(lastName.URLEncodedString()!)&sum=\(payment)"
-        let request = self.buildRequest(urlPath, parameters: params)
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+        let request = self.buildRequest(url: urlPath, parameters: params)
+        let session = URLSession.shared
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
             
             guard error == nil else { return }
             
-            let httpResponse = response as? NSHTTPURLResponse
+            let httpResponse = response as? HTTPURLResponse
             guard httpResponse!.statusCode < 400 else {
                 print("statusCode: \(httpResponse!.statusCode)")
                 return
@@ -37,25 +37,25 @@ class AddCounterViewController: MyBaseViewController, UITextFieldDelegate {
             
             var json: NSDictionary?
             do {
-                json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
+                json = try JSONSerialization.jsonObject(with: data!, options: .mutableLeaves) as? NSDictionary
             } catch {
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.messageNotification("Could not parse JSON")
+                DispatchQueue.main.async {
+                    self.messageNotification(message: "Could not parse JSON")
                     return
-                })
+                }
             }
             if let parseJSON = json {
                 let success = parseJSON["success"] as? Bool
                 if success == true {
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self.performSegueWithIdentifier("endRegistration", sender: self)
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "endRegistration", sender: self)
                         return
-                    })
+                    }
                 } else {
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self.messageNotification(parseJSON["message"] as! String)
+                    DispatchQueue.main.async {
+                        self.messageNotification(message: parseJSON["message"] as! String)
                         return
-                    })
+                    }
                 }
             }
         })
@@ -63,11 +63,11 @@ class AddCounterViewController: MyBaseViewController, UITextFieldDelegate {
         task.resume()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let _ = touches.first {
             view.endEditing(true)
         }
-        super.touchesBegan(touches , withEvent:event)
+        super.touchesBegan(touches , with:event)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

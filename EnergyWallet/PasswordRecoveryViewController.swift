@@ -13,19 +13,19 @@ class PasswordRecoveryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var userRecoveryPassword: UITextField!
     
-    @IBAction func recoveryPasswordButton(sender: AnyObject) {
+    @IBAction func recoveryPasswordButton(_ sender: AnyObject) {
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
-        ScrollView.setContentOffset(CGPointMake(0,180), animated: true)
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        ScrollView.setContentOffset(CGPoint(x: 0,y: 180), animated: true)
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
-        ScrollView.setContentOffset(CGPointMake(0,0), animated: true)
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        ScrollView.setContentOffset(CGPoint(x: 0,y: 0), animated: true)
     }
 }

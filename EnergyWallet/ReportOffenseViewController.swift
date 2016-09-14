@@ -16,18 +16,18 @@ class ReportOffenseViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var reportHouseNumberDetailTF: UITextField!
     @IBOutlet weak var reportSpecificationTF: UITextField!
     
-    @IBAction func sendCompleteButton(sender: AnyObject) {
+    @IBAction func sendCompleteButton(_ sender: AnyObject) {
         view.endEditing(true)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let _ = touches.first {
             view.endEditing(true)
         }
-        super.touchesBegan(touches , withEvent:event)
+        super.touchesBegan(touches , with:event)
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }

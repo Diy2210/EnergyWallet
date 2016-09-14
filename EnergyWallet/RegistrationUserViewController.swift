@@ -15,14 +15,14 @@ class RegistrationUserViewController: MyBaseViewController, UITextFieldDelegate 
     @IBOutlet weak var userEmailRegistration: UITextField!
     @IBOutlet weak var userPasswordRegistration: UITextField!
     
-    @IBAction func completeNextButton(sender: AnyObject) {
+    @IBAction func completeNextButton(_ sender: AnyObject) {
         
         let phone = userPhoneRegistration.text!
         let email = userEmailRegistration.text!
         let password = userPasswordRegistration.text!
         
         if phone.isEmpty || email.isEmpty || password.isEmpty {
-            self.messageNotification("Пожалуйста, проверьте введенные данные. Одно из полей не заполнено")
+            self.messageNotification(message: "Пожалуйста, проверьте введенные данные. Одно из полей не заполнено")
             
             return
         }
@@ -30,22 +30,22 @@ class RegistrationUserViewController: MyBaseViewController, UITextFieldDelegate 
         let urlPath = Settings.sharedInstance.serverURL + Settings.sharedInstance.createUserURI
         let params = "phone=\(phone.URLEncodedString()!)&email=\(email.URLEncodedString()!)&password=\(password.URLEncodedString()!)"
         
-        let task = self.sendRequest(urlPath, parameters: params, phone: phone, password: password, segue: "createUser")
+        let task = self.sendRequest(urlPath: urlPath, parameters: params, phone: phone, password: password, segue: "createUser")
         
         task.resume()
         
     }
     
-        func textFieldShouldReturn(textField: UITextField) -> Bool {
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
-        ScrollView.setContentOffset(CGPointMake(0,220), animated: true)
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        ScrollView.setContentOffset(CGPoint(x: 0,y: 220), animated: true)
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
-        ScrollView.setContentOffset(CGPointMake(0,0), animated: true)
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        ScrollView.setContentOffset(CGPoint(x: 0,y: 0), animated: true)
     }
 }

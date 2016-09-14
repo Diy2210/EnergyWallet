@@ -10,14 +10,14 @@ import UIKit
 
 class WelcomeSplashScreen: UIViewController {
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         let phone = Settings.sharedInstance.phone
         let password = Settings.sharedInstance.password
         if phone.isEmpty || password.isEmpty {
-            self.performSegueWithIdentifier("Autorization", sender: self)
+            self.performSegue(withIdentifier: "Autorization", sender: self)
         } else {
-            self.performSegueWithIdentifier("MenuController", sender: self)
+            self.performSegue(withIdentifier: "MenuController", sender: self)
         }
     }
 }

@@ -14,44 +14,44 @@ class ReportDamageTakePhotoViewController: UIViewController, UIImagePickerContro
     @IBOutlet weak var imagePicked: UIImageView!
     
     // Open camera
-    @IBAction func openCameraButton(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+    @IBAction func openCameraButton(_ sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera;
             imagePicker.allowsEditing = false
-            self.presentViewController(imagePicker, animated: true, completion: nil)
+            self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
     // Save button
-    @IBAction func saveButton(sender: AnyObject) {
+    @IBAction func saveButton(_ sender: AnyObject) {
         let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
         let compressedJPGImage = UIImage(data: imageData!)
         UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
         
-        let alertController = UIAlertController(title: "Готово", message: "Изображение было сохранено в галереи", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "Готово", message: "Изображение было сохранено в галереи", preferredStyle: .alert)
         
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)
         
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
     // Open photo library
-    @IBAction func openPhotoLibraryButton(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+    @IBAction func openPhotoLibraryButton(_ sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
             imagePicker.allowsEditing = true
-            self.presentViewController(imagePicker, animated: true, completion: nil)
+            self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
     // Image picker
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [AnyHashable: Any]!) {
         imagePicked.image = image
-        self.dismissViewControllerAnimated(true, completion: nil);
+        self.dismiss(animated: true, completion: nil);
     }
 }
