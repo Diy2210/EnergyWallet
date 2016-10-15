@@ -16,10 +16,12 @@ class IntroViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Login button color
         loginButton.layer.borderColor = UIColor(red: 0.21, green: 0.75, blue: 0.97, alpha: 1).cgColor
         loginButton.layer.cornerRadius = 4
         loginButton.layer.borderWidth = 1
         
+        //Register button color
         registerButton.layer.borderColor = UIColor(red: 0.21, green: 0.75, blue: 0.97, alpha: 1).cgColor
         registerButton.layer.cornerRadius = 4
         registerButton.layer.borderWidth = 1

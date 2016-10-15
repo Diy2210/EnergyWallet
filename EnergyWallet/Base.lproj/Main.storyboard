@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iJ4-e4-hgb">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iJ4-e4-hgb">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8SN-BL-xzj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0bR-Nc-hnB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="6fr-Xz-fSl"/>
@@ -229,7 +229,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bdE-Sy-dNS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tzi-yU-0nK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="EEb-GC-Iew"/>
@@ -385,7 +385,7 @@
                         <viewControllerLayoutGuide type="bottom" id="f1y-xu-LET"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KqS-T2-j1B">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="O83-ab-M83"/>
@@ -556,7 +556,7 @@
                         <viewControllerLayoutGuide type="bottom" id="tro-2i-VNT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RPh-ee-0I0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Sm1-Bi-wUO"/>
@@ -670,11 +670,11 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="gGX-ob-Z95"/>
                                 <exclude reference="XPt-Ik-sXq"/>
                                 <exclude reference="eaM-OZ-7UB"/>
                                 <exclude reference="rYP-40-MXJ"/>
                                 <exclude reference="unW-ny-dIK"/>
-                                <exclude reference="gGX-ob-Z95"/>
                             </mask>
                         </variation>
                     </view>
@@ -695,7 +695,7 @@
                         <viewControllerLayoutGuide type="bottom" id="oUF-rv-bwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PG2-6W-L3M">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bnz-3e-Pla">
@@ -789,7 +789,7 @@
                         <viewControllerLayoutGuide type="bottom" id="aB9-Aw-u5p"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dAK-9y-jV8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Hk-P2-tXU"/>
@@ -1042,7 +1042,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Fgz-PU-8es"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="55w-2g-J0h">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="1wm-jp-l7a"/>
@@ -1150,17 +1150,17 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Akx-L0-ygi"/>
                                 <exclude reference="7mW-Pn-6Mk"/>
+                                <exclude reference="Gl4-vb-Uyp"/>
+                                <exclude reference="Sti-AP-aOZ"/>
+                                <exclude reference="Alu-7I-PkE"/>
+                                <exclude reference="unr-r9-dPa"/>
                                 <exclude reference="8xt-a9-KtH"/>
                                 <exclude reference="CrC-0G-uDb"/>
                                 <exclude reference="Ecc-l6-kTi"/>
                                 <exclude reference="ldW-CS-MSB"/>
                                 <exclude reference="xe4-Sg-evt"/>
-                                <exclude reference="Akx-L0-ygi"/>
-                                <exclude reference="Gl4-vb-Uyp"/>
-                                <exclude reference="Sti-AP-aOZ"/>
-                                <exclude reference="Alu-7I-PkE"/>
-                                <exclude reference="unr-r9-dPa"/>
                             </mask>
                         </variation>
                     </view>
@@ -1188,7 +1188,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5rW-lR-NTK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bxa-ci-Ndw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGV-iJ-PwS">
@@ -1233,7 +1233,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ywt-md-LP5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Ot-K2-8fb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndd-3o-7dI">
@@ -1428,7 +1428,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hvs-lQ-ahJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3xP-Lo-aEz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKa-KO-Mhd">
@@ -1489,7 +1489,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                         <connections>
-                                            <outlet property="delegate" destination="4lC-13-6vV" id="i0I-kN-vMO"/>
+                                            <outlet property="delegate" destination="4lC-13-6vV" id="SWy-4G-Z1i"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -1549,7 +1549,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WaI-kn-ECr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hPz-Gb-3DE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqa-Xh-dNe">
@@ -1717,7 +1717,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lSJ-wz-JMW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QC9-uw-mSq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9N-5p-535">
@@ -1828,7 +1828,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xfo-n6-O7m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iv4-3U-VoI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Пользовательское соглашение" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-CI-wKj">
@@ -1921,7 +1921,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Eke-4c-fiB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4Dr-oK-kov">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="4QQ-9T-JUM"/>
@@ -2038,7 +2038,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Mca-IF-6mj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="10U-H4-Cva">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q2U-OC-pXO"/>
@@ -2165,20 +2165,20 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Iyt-L5-Fik"/>
-                                <exclude reference="bRi-C1-eoF"/>
-                                <exclude reference="PJa-6K-13l"/>
-                                <exclude reference="YfU-Ei-lND"/>
                                 <exclude reference="Q2r-Q1-3oD"/>
                                 <exclude reference="eDl-Sr-Unm"/>
+                                <exclude reference="YfU-Ei-lND"/>
+                                <exclude reference="Iyt-L5-Fik"/>
+                                <exclude reference="bRi-C1-eoF"/>
                                 <exclude reference="9Uo-Df-mQQ"/>
                                 <exclude reference="W26-b1-Sy6"/>
                                 <exclude reference="nER-Bu-6PM"/>
+                                <exclude reference="O9n-WF-6SA"/>
+                                <exclude reference="jpD-D0-2CJ"/>
+                                <exclude reference="PJa-6K-13l"/>
                                 <exclude reference="Eta-g2-gd4"/>
                                 <exclude reference="KWD-QY-Gow"/>
                                 <exclude reference="TLU-QF-VwM"/>
-                                <exclude reference="O9n-WF-6SA"/>
-                                <exclude reference="jpD-D0-2CJ"/>
                             </mask>
                         </variation>
                     </view>
@@ -2229,7 +2229,7 @@
                         <viewControllerLayoutGuide type="bottom" id="D1B-rD-FwH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rlo-vm-mB4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Nc-kX-fVP"/>
@@ -2369,10 +2369,10 @@
                             <mask key="constraints">
                                 <exclude reference="WhL-3R-k4a"/>
                                 <exclude reference="uhj-Du-EXu"/>
-                                <exclude reference="rKf-LO-fWz"/>
                                 <exclude reference="Oca-Uu-qpa"/>
                                 <exclude reference="Y6e-EJ-rzO"/>
                                 <exclude reference="xF2-Br-e2Z"/>
+                                <exclude reference="rKf-LO-fWz"/>
                                 <exclude reference="Fh9-gc-AvL"/>
                                 <exclude reference="p4s-ou-vS7"/>
                                 <exclude reference="vYU-QD-mKb"/>
@@ -2411,7 +2411,7 @@
                         <viewControllerLayoutGuide type="bottom" id="sRp-PN-Hfl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rD8-VE-0L1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1Hi-wo-JuM">
@@ -2475,7 +2475,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vLG-fL-orm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5Z0-Ou-F1C">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pa4-CR-Eqa"/>
@@ -2631,7 +2631,7 @@
                         <viewControllerLayoutGuide type="bottom" id="SoG-3U-Z8w"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3s4-NO-L5Z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="h3e-hX-xVx"/>
@@ -2762,9 +2762,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="YgZ-qi-hMT"/>
                                 <exclude reference="2QR-Bu-voq"/>
                                 <exclude reference="ZSf-h0-I9R"/>
-                                <exclude reference="YgZ-qi-hMT"/>
                                 <exclude reference="AJx-dW-4Zj"/>
                                 <exclude reference="dCu-J6-V00"/>
                             </mask>
@@ -2799,7 +2799,7 @@
                         <viewControllerLayoutGuide type="bottom" id="PTq-r6-4jD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GOn-HZ-Z7X">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="oti-dm-p1R"/>
@@ -2908,7 +2908,7 @@
                         <viewControllerLayoutGuide type="bottom" id="mu4-It-LWw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ott-Xe-3eF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqH-nb-cKv">
@@ -3024,7 +3024,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WHB-aR-wv7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="puw-MX-bd2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kkb-RK-Xek">
@@ -3156,10 +3156,10 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="6v9-AM-CkK"/>
-                                        <exclude reference="pcP-xT-j2B"/>
                                         <exclude reference="7a3-UV-mGf"/>
                                         <exclude reference="YB2-WV-tiW"/>
+                                        <exclude reference="6v9-AM-CkK"/>
+                                        <exclude reference="pcP-xT-j2B"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -3233,7 +3233,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2id-ty-3oI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NWx-K5-Ud9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lPm-Oz-Uho">
@@ -3326,7 +3326,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RFV-9E-I6Q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lkZ-PE-sUh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZXc-ku-UNn">
@@ -3335,7 +3335,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo-50" translatesAutoresizingMaskIntoConstraints="NO" id="cqn-CF-2hR"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8c-yj-sgJ">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="wSt-Ao-9H6"/>
+                                    <constraint firstAttribute="width" constant="32" id="SMT-9b-aU8"/>
                                 </constraints>
                                 <connections>
                                     <action selector="openCameraButton:" destination="qJ0-7K-wyB" eventType="touchUpInside" id="zJd-ND-zN4"/>
@@ -3343,8 +3343,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfo-2d-UuL">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="D6d-M8-ajT"/>
-                                    <constraint firstAttribute="width" constant="90" id="NQU-LE-Yq0"/>
+                                    <constraint firstAttribute="height" constant="30" id="QrT-ve-twh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Сохранить">
@@ -3356,7 +3355,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxa-8t-zXv">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="VOC-fV-Xjq"/>
+                                    <constraint firstAttribute="width" constant="140" id="pgG-ph-GCm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <state key="normal" title="вернуться назад">
@@ -3367,9 +3366,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTs-vz-nGi">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="7Y7-pc-uXQ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Добавить">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3378,27 +3374,42 @@
                                     <action selector="openPhotoLibraryButton:" destination="qJ0-7K-wyB" eventType="touchUpInside" id="ED4-6r-zP3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-sc-cwQ">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Отправить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reportButton:" destination="qJ0-7K-wyB" eventType="touchUpInside" id="hkr-HN-js6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.58431372549019611" green="0.81176470588235294" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfo-2d-UuL" firstAttribute="baseline" secondItem="vTs-vz-nGi" secondAttribute="baseline" id="7Rf-Ia-90w"/>
-                            <constraint firstItem="cqn-CF-2hR" firstAttribute="top" secondItem="ZXc-ku-UNn" secondAttribute="bottom" constant="8" symbolic="YES" id="7fJ-I3-EMb"/>
-                            <constraint firstItem="jxa-8t-zXv" firstAttribute="top" secondItem="H8c-yj-sgJ" secondAttribute="bottom" constant="8" symbolic="YES" id="BSB-cu-FXX"/>
-                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="trailing" secondItem="lkZ-PE-sUh" secondAttribute="trailingMargin" id="Cqo-bK-PfJ"/>
-                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="trailing" secondItem="vTs-vz-nGi" secondAttribute="trailing" id="DNw-Ze-Rf4"/>
-                            <constraint firstItem="wfo-2d-UuL" firstAttribute="centerY" secondItem="H8c-yj-sgJ" secondAttribute="centerY" id="MAl-P2-lGk"/>
-                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="centerX" secondItem="cqn-CF-2hR" secondAttribute="centerX" id="PQB-Zi-mlr"/>
-                            <constraint firstItem="cqn-CF-2hR" firstAttribute="leading" secondItem="H8c-yj-sgJ" secondAttribute="leading" id="RRb-Ig-jiu"/>
-                            <constraint firstItem="cqn-CF-2hR" firstAttribute="centerX" secondItem="jxa-8t-zXv" secondAttribute="centerX" id="UlV-Hy-oqX"/>
-                            <constraint firstItem="cqn-CF-2hR" firstAttribute="top" secondItem="H8c-yj-sgJ" secondAttribute="top" id="V3f-jN-4w2"/>
-                            <constraint firstItem="cqn-CF-2hR" firstAttribute="trailing" secondItem="H8c-yj-sgJ" secondAttribute="trailing" id="YSm-g7-itr"/>
-                            <constraint firstItem="jxa-8t-zXv" firstAttribute="top" secondItem="cqn-CF-2hR" secondAttribute="bottom" constant="8" symbolic="YES" id="cPN-qT-OxY"/>
-                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="top" secondItem="YwV-gY-fRH" secondAttribute="bottom" id="epH-32-5jn"/>
-                            <constraint firstItem="RFV-9E-I6Q" firstAttribute="top" secondItem="jxa-8t-zXv" secondAttribute="bottom" constant="8" symbolic="YES" id="hij-yx-MkK"/>
-                            <constraint firstItem="RFV-9E-I6Q" firstAttribute="top" secondItem="wfo-2d-UuL" secondAttribute="bottom" constant="47" id="iJ5-iX-gRP"/>
-                            <constraint firstItem="wfo-2d-UuL" firstAttribute="top" secondItem="ZXc-ku-UNn" secondAttribute="bottom" constant="9" id="qW6-va-m9v"/>
-                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="leading" secondItem="wfo-2d-UuL" secondAttribute="leading" id="seT-1P-D7r"/>
-                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="leading" secondItem="lkZ-PE-sUh" secondAttribute="leadingMargin" id="uqg-cy-dTI"/>
+                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="leading" secondItem="lkZ-PE-sUh" secondAttribute="leadingMargin" id="2XY-TW-PV7"/>
+                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="centerX" secondItem="H8c-yj-sgJ" secondAttribute="centerX" id="4Tb-oC-phC"/>
+                            <constraint firstItem="cqn-CF-2hR" firstAttribute="centerX" secondItem="jxa-8t-zXv" secondAttribute="centerX" id="65i-By-r78"/>
+                            <constraint firstItem="H8c-yj-sgJ" firstAttribute="trailing" secondItem="cqn-CF-2hR" secondAttribute="trailing" id="A9L-uQ-Xie"/>
+                            <constraint firstItem="ahZ-sc-cwQ" firstAttribute="leading" secondItem="vTs-vz-nGi" secondAttribute="leading" id="Aal-Jp-Yxi"/>
+                            <constraint firstItem="cqn-CF-2hR" firstAttribute="top" secondItem="ZXc-ku-UNn" secondAttribute="bottom" constant="8" symbolic="YES" id="LWK-GT-KzF"/>
+                            <constraint firstItem="jxa-8t-zXv" firstAttribute="top" secondItem="H8c-yj-sgJ" secondAttribute="bottom" constant="8" symbolic="YES" id="M85-Ir-FYD"/>
+                            <constraint firstItem="vTs-vz-nGi" firstAttribute="baseline" secondItem="wfo-2d-UuL" secondAttribute="firstBaseline" id="RUn-nc-gaa"/>
+                            <constraint firstItem="H8c-yj-sgJ" firstAttribute="leading" secondItem="wfo-2d-UuL" secondAttribute="trailing" constant="66" id="W2S-bQ-kxO"/>
+                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="leading" secondItem="wfo-2d-UuL" secondAttribute="leading" id="WP2-Ym-bXa"/>
+                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="trailing" secondItem="vTs-vz-nGi" secondAttribute="trailing" id="YUX-gU-jfh"/>
+                            <constraint firstItem="wfo-2d-UuL" firstAttribute="top" secondItem="ZXc-ku-UNn" secondAttribute="bottom" constant="9" id="c3N-mI-mNY"/>
+                            <constraint firstItem="cqn-CF-2hR" firstAttribute="top" secondItem="H8c-yj-sgJ" secondAttribute="top" id="cu7-8y-21c"/>
+                            <constraint firstItem="RFV-9E-I6Q" firstAttribute="top" secondItem="wfo-2d-UuL" secondAttribute="bottom" constant="47" id="elT-Dg-oI5"/>
+                            <constraint firstItem="vTs-vz-nGi" firstAttribute="leading" secondItem="cqn-CF-2hR" secondAttribute="trailing" constant="45" id="hZG-zF-veu"/>
+                            <constraint firstItem="ahZ-sc-cwQ" firstAttribute="trailing" secondItem="lkZ-PE-sUh" secondAttribute="trailingMargin" id="in0-Gi-JKK"/>
+                            <constraint firstItem="cqn-CF-2hR" firstAttribute="leading" secondItem="H8c-yj-sgJ" secondAttribute="leading" id="ine-Um-M67"/>
+                            <constraint firstItem="ahZ-sc-cwQ" firstAttribute="top" secondItem="YwV-gY-fRH" secondAttribute="bottom" constant="8" symbolic="YES" id="kcu-6f-uCb"/>
+                            <constraint firstItem="ahZ-sc-cwQ" firstAttribute="trailing" secondItem="ZXc-ku-UNn" secondAttribute="trailing" id="qoK-Mo-YjT"/>
+                            <constraint firstItem="ZXc-ku-UNn" firstAttribute="top" secondItem="ahZ-sc-cwQ" secondAttribute="bottom" constant="8" symbolic="YES" id="rn7-RX-d8y"/>
+                            <constraint firstItem="cqn-CF-2hR" firstAttribute="centerY" secondItem="vTs-vz-nGi" secondAttribute="centerY" id="sAv-Ya-vyM"/>
+                            <constraint firstItem="RFV-9E-I6Q" firstAttribute="top" secondItem="jxa-8t-zXv" secondAttribute="bottom" constant="8" symbolic="YES" id="sSI-0o-FMj"/>
+                            <constraint firstItem="jxa-8t-zXv" firstAttribute="top" secondItem="cqn-CF-2hR" secondAttribute="bottom" constant="8" symbolic="YES" id="sgB-6e-kfK"/>
+                            <constraint firstItem="wfo-2d-UuL" firstAttribute="baseline" secondItem="vTs-vz-nGi" secondAttribute="firstBaseline" id="ybP-ec-Ulg"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -3408,7 +3419,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ee-4H-LiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="6873"/>
+            <point key="canvasLocation" x="1224.8" y="6872.1139430284866"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="u9M-DQ-6gA">
@@ -3471,17 +3482,17 @@
         <image name="wallet icon" width="31" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e9G-74-KAj"/>
-        <segue reference="A7r-kg-pB7"/>
-        <segue reference="Afu-ue-rJ5"/>
-        <segue reference="DQG-aH-OWI"/>
-        <segue reference="X8C-WI-lYn"/>
-        <segue reference="kAH-Xz-NwM"/>
-        <segue reference="J2Z-Td-QU9"/>
-        <segue reference="hDw-Ki-UqP"/>
-        <segue reference="XvF-eQ-RMm"/>
-        <segue reference="nJk-kJ-9UH"/>
+        <segue reference="Crv-Ks-U7l"/>
         <segue reference="jdk-5O-Xdg"/>
+        <segue reference="kAH-Xz-NwM"/>
+        <segue reference="e9G-74-KAj"/>
+        <segue reference="J2Z-Td-QU9"/>
+        <segue reference="i6n-he-rvz"/>
+        <segue reference="CJN-tN-0Fx"/>
+        <segue reference="mj2-e4-ENf"/>
+        <segue reference="nJk-kJ-9UH"/>
+        <segue reference="Afu-ue-rJ5"/>
+        <segue reference="hDw-Ki-UqP"/>
         <segue reference="JQc-aM-Kna"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>EneryWalletEndPoint</key>
-	<string>http://52.57.39.93</string>
+	<string>http://52.57.166.209</string>
 	<key>CreateUserURI</key>
 	<string>/api/user</string>
 	<key>LoginUserURI</key>

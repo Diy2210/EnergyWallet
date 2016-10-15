@@ -27,7 +27,6 @@ class MyBaseViewController: UIViewController {
         activityIndicator = nil
     }
     
-    
     // Messege notification
     func messageNotification(message: String, title: String = "Ошибка") -> Void {
         let AlertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -105,8 +104,7 @@ class MyBaseViewController: UIViewController {
 
 extension String {
     func URLEncodedString() -> String? {
-        let customAllowedSet = NSCharacterSet(charactersIn:"=+\"#%/<>?@\\^`{|}").inverted
-        //let escapedString = self.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)
+        _ = NSCharacterSet(charactersIn:"=+\"#%/<>?@\\^`{|}").inverted
         let urlwithPercentEscapes = self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         return urlwithPercentEscapes
     }
